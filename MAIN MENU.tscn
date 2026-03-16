@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cgsuwgke5iefr"]
+
+[ext_resource type="Texture2D" uid="uid://b5td3rg5w1yxv" path="res://MAIN MENU.png" id="1_iwmwd"]
+
+[node name="MainMenu" type="Control" unique_id=187314477]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1718691616]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_iwmwd")
+
+[node name="Button" type="Button" parent="." unique_id=1748238660]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
