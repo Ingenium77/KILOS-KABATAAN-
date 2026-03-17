@@ -1,23 +1,24 @@
 f098f8d3115d962055284dee314b4f89
-::res://::1773744529
-CREDITS.tscn::PackedScene::3705725531281963369::1773720608::0::1::::<><><>0<>0<><>::
+::res://::1773760067
+credits.gd::GDScript::4708852644635726958::1773745054::0::1::::<>Control<><>0<>0<><>::
+CREDITS.tscn::PackedScene::3705725531281963369::1773745132::0::1::::<><><>0<>0<><>::uid://b8dad6bkppnny::::res://credits.gd<>uid://ctdugxt0gsm4h::::res://HEL005 ARTS & DESIGN/Screenshot (1633).png
 icon.svg::CompressedTexture2D::8828621512572872176::1773662778::1773673493::1::::<><><>0<>0<>d45d37d5a1cba1c51d0644f4b71f0bbb<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 MAIN MENU.png::CompressedTexture2D::4531542226928136307::1773673253::1773673493::1::::<><><>0<>0<>b83b39dde6df72afb38690d594d9bce9<>res://.godot/imported/MAIN MENU.png-75455fa9629ecbf5edc2f597a88d7f23.ctex::
-MAIN MENU.tscn::PackedScene::5232387186919005419::1773744297::0::1::::<><><>0<>0<><>::uid://dpdpn8xxun4f1::::res://main_menu.gd<>uid://b5td3rg5w1yxv::::res://MAIN MENU.png
+MAIN MENU.tscn::PackedScene::5232387186919005419::1773745136::0::1::::<><><>0<>0<><>::uid://dpdpn8xxun4f1::::res://main_menu.gd<>uid://b5td3rg5w1yxv::::res://MAIN MENU.png
 main_menu.gd::GDScript::8219223578997571328::1773744297::0::1::::<>Control<><>0<>0<><>::
 README.md::TextFile::-1::1773662777::0::1::::<><><>0<>0<><>::
-SETTINGS.tscn::PackedScene::6432910898138295539::1773720607::0::1::::<><><>0<>0<><>::uid://bf2qn0j4t07w8::::res://HEL005 ARTS & DESIGN/SETTINGS 2.png
+SETTINGS.tscn::PackedScene::6432910898138295539::1773745134::0::1::::<><><>0<>0<><>::uid://bf2qn0j4t07w8::::res://HEL005 ARTS & DESIGN/SETTINGS 2.png
 ::res://addons/::1773662777
 ::res://addons/dialogue_manager/::1773662778
 constants.gd::GDScript::4240262336831424009::1773662778::0::1::::DMConstants<>RefCounted<><>0<>0<><>::
-dialogue_label.gd::GDScript::480611383085669467::1773662778::0::1::::DialogueLabel<>RichTextLabel<><>0<>1<><>::
+dialogue_label.gd::GDScript::480611383085669467::1773662778::0::1::::DialogueLabel<>RichTextLabel<>res://addons/dialogue_manager/assets/icon.svg<>0<>1<><>::
 dialogue_label.tscn::PackedScene::5518490004210093266::1773662778::0::1::::<><><>0<>0<><>::uid://g32um0mltv5d::::res://addons/dialogue_manager/dialogue_label.gd
 dialogue_line.gd::GDScript::1208905219044177333::1773662778::0::1::::DialogueLine<>RefCounted<><>0<>0<><>::
 dialogue_manager.gd::GDScript::6774079045493014679::1773662778::0::1::::<>Node<><>0<>0<><>::
 dialogue_processor.gd::GDScript::900179394300351269::1773662778::0::1::::DMDialogueProcessor<>RefCounted<><>0<>0<><>::
-dialogue_resource.gd::GDScript::7268423792262407282::1773662778::0::1::::DialogueResource<>Resource<><>0<>1<><>::
+dialogue_resource.gd::GDScript::7268423792262407282::1773662778::0::1::::DialogueResource<>Resource<>res://addons/dialogue_manager/assets/icon.svg<>0<>1<><>::
 dialogue_response.gd::GDScript::5668140482552713515::1773662778::0::1::::DialogueResponse<>RefCounted<><>0<>0<><>::
-dialogue_responses_menu.gd::GDScript::2520211531407682507::1773662778::0::1::::DialogueResponsesMenu<>Container<><>0<>0<><>::
+dialogue_responses_menu.gd::GDScript::2520211531407682507::1773662778::0::1::::DialogueResponsesMenu<>Container<>res://addons/dialogue_manager/assets/responses_menu.svg<>0<>0<><>::
 editor_translation_parser_plugin.gd::GDScript::6952218891186463517::1773662778::0::1::::DMTranslationParserPlugin<>EditorTranslationParserPlugin<><>0<>0<><>::
 export_plugin.gd::GDScript::1265275163198105838::1773662778::0::1::::DMExportPlugin<>EditorExportPlugin<><>0<>0<><>::
 import_plugin.gd::GDScript::7696928728755687928::1773662778::0::1::::DMImportPlugin<>EditorImportPlugin<><>0<>1<><>::
@@ -87,7 +88,7 @@ main_view.gd::GDScript::5365867961863611872::1773662778::0::1::::<>Control<><>0<
 main_view.tscn::PackedScene::4884668666408697448::1773662778::0::1::::<><><>0<>0<><>::uid://cipjcc7bkh1pc::::res://addons/dialogue_manager/views/main_view.gd<>uid://civ6shmka5e8u::::res://addons/dialogue_manager/components/code_edit.tscn<>uid://dnufpcdrreva3::::res://addons/dialogue_manager/components/files_list.tscn<>uid://ctns6ouwwd68i::::res://addons/dialogue_manager/components/title_list.tscn<>uid://co8yl23idiwbi::::res://addons/dialogue_manager/components/update_button.tscn<>uid://gr8nakpbrhby::::res://addons/dialogue_manager/components/search_and_replace.tscn<>uid://cs8pwrxr5vxix::::res://addons/dialogue_manager/components/errors_panel.tscn<>uid://klpiq4tk3t7a::::res://addons/dialogue_manager/components/code_edit_syntax_highlighter.gd<>uid://cnm67htuohhlo::::res://addons/dialogue_manager/assets/banner.png
 ::res://Dialogues/::1773744527
 main.dialogue::Resource::4444220157558882562::1773662777::1773673493::1::::<><><>0<>0<>572ad77ebd8ae4ba505e9f2629563817<>res://.godot/imported/main.dialogue-b0d64d19e807139d12415853ad45b478.tres::uid://dbs4435dsf3ry::::res://addons/dialogue_manager/dialogue_resource.gd
-::res://HEL005 ARTS & DESIGN/::1773744527
+::res://HEL005 ARTS & DESIGN/::1773744530
 CONTROLS.png::CompressedTexture2D::7553720658188578278::1773717874::1773715808::1::::<><><>0<>0<>95d3269388ff4ad9b31964e562015407<>res://.godot/imported/CONTROLS.png-e940862e3f1fe90303df3aeed1bd985b.ctex::
 DIALOGUE.png::CompressedTexture2D::7912247664254865583::1773717874::1773715808::1::::<><><>0<>0<>acef55a6260b5031ba6f796f84bd0cd6<>res://.godot/imported/DIALOGUE.png-7a16379c69898bcb7dc80e4d67b93e90.ctex::
 ground_tiles.png::CompressedTexture2D::1807072998403347637::1773717874::1773715808::1::::<><><>0<>0<>08c2c8a695e7f1761d3335758c158d1d<>res://.godot/imported/ground_tiles.png-026f5970cbd02418ade9d5d2faaa3c5c.ctex::
