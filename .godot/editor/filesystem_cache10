@@ -1,9 +1,9 @@
 f098f8d3115d962055284dee314b4f89
-::res://::1773673253
+::res://::1773715807
 icon.svg::CompressedTexture2D::8828621512572872176::1773662778::1773673493::1::::<><><>0<>0<>d45d37d5a1cba1c51d0644f4b71f0bbb<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 MAIN MENU.png::CompressedTexture2D::4531542226928136307::1773673253::1773673493::1::::<><><>0<>0<>b83b39dde6df72afb38690d594d9bce9<>res://.godot/imported/MAIN MENU.png-75455fa9629ecbf5edc2f597a88d7f23.ctex::
-README.md::TextFile::-1::1773662777::0::1::::<><><>0<>0<><>::
 MAIN MENU.tscn::PackedScene::5232387186919005419::1773673253::0::1::::<><><>0<>0<><>::uid://b5td3rg5w1yxv::::res://MAIN MENU.png
+README.md::TextFile::-1::1773662777::0::1::::<><><>0<>0<><>::
 ::res://addons/::1773662777
 ::res://addons/dialogue_manager/::1773662778
 constants.gd::GDScript::4240262336831424009::1773662778::0::1::::DMConstants<>RefCounted<><>0<>0<><>::
@@ -24,7 +24,7 @@ plugin.gd::GDScript::3484415935520294050::1773662778::0::1::::DMPlugin<>EditorPl
 settings.gd::GDScript::5108079527952811623::1773662778::0::1::::DMSettings<>Node<><>0<>1<><>::
 test_scene.gd::GDScript::7098965565189014022::1773662778::0::1::::BaseDialogueTestScene<>Node2D<><>0<>0<><>::
 test_scene.tscn::PackedScene::1416400481679934567::1773662778::0::1::::<><><>0<>0<><>::uid://c8e16qdgu40wo::::res://addons/dialogue_manager/test_scene.gd
-::res://addons/dialogue_manager/assets/::1773673252
+::res://addons/dialogue_manager/assets/::1773673494
 banner.png::CompressedTexture2D::5712008637852493176::1773662778::1773673493::1::::<><><>0<>0<>fb4fc905c1a325217052671df272d56b<>res://.godot/imported/banner.png-7e9e6a304eef850602c8d5afb80df9c3.ctex::
 icon.svg::CompressedTexture2D::9148339284877624195::1773662778::1773673494::1::::<><><>0<>0<>b9cd01d47b7432b7516dc9b23d8cf543<>res://.godot/imported/icon.svg-17eb5d3e2a3cfbe59852220758c5b7bd.ctex::
 responses_menu.svg::CompressedTexture2D::8371359403825774630::1773662778::1773673494::1::::<><><>0<>0<>87c0e16666f0d434c838e4c260e9dfa7<>res://.godot/imported/responses_menu.svg-87cf63ca685d53616205049572f4eb8f.ctex::
@@ -82,5 +82,13 @@ find_in_dialogue_view.gd::GDScript::1182765515527006779::1773662778::0::1::::<>P
 find_in_dialogue_view.tscn::PackedScene::1783514634430556025::1773662778::0::1::::<><><>0<>0<><>::uid://q368fmxxa8sd::::res://addons/dialogue_manager/views/find_in_dialogue_view.gd
 main_view.gd::GDScript::5365867961863611872::1773662778::0::1::::<>Control<><>0<>1<><>::
 main_view.tscn::PackedScene::4884668666408697448::1773662778::0::1::::<><><>0<>0<><>::uid://cipjcc7bkh1pc::::res://addons/dialogue_manager/views/main_view.gd<>uid://civ6shmka5e8u::::res://addons/dialogue_manager/components/code_edit.tscn<>uid://dnufpcdrreva3::::res://addons/dialogue_manager/components/files_list.tscn<>uid://ctns6ouwwd68i::::res://addons/dialogue_manager/components/title_list.tscn<>uid://co8yl23idiwbi::::res://addons/dialogue_manager/components/update_button.tscn<>uid://gr8nakpbrhby::::res://addons/dialogue_manager/components/search_and_replace.tscn<>uid://cs8pwrxr5vxix::::res://addons/dialogue_manager/components/errors_panel.tscn<>uid://klpiq4tk3t7a::::res://addons/dialogue_manager/components/code_edit_syntax_highlighter.gd<>uid://cnm67htuohhlo::::res://addons/dialogue_manager/assets/banner.png
-::res://Dialogues/::1773673252
+::res://Dialogues/::1773673493
 main.dialogue::Resource::4444220157558882562::1773662777::1773673493::1::::<><><>0<>0<>572ad77ebd8ae4ba505e9f2629563817<>res://.godot/imported/main.dialogue-b0d64d19e807139d12415853ad45b478.tres::uid://dbs4435dsf3ry::::res://addons/dialogue_manager/dialogue_resource.gd
+::res://HEL005 ARTS & DESIGN/::1773715807
+CONTROLS.png::CompressedTexture2D::7553720658188578278::1773715807::1773715808::1::::<><><>0<>0<>95d3269388ff4ad9b31964e562015407<>res://.godot/imported/CONTROLS.png-e940862e3f1fe90303df3aeed1bd985b.ctex::
+DIALOGUE.png::CompressedTexture2D::7912247664254865583::1773715807::1773715808::1::::<><><>0<>0<>acef55a6260b5031ba6f796f84bd0cd6<>res://.godot/imported/DIALOGUE.png-7a16379c69898bcb7dc80e4d67b93e90.ctex::
+ground_tiles.png::CompressedTexture2D::1807072998403347637::1773715807::1773715808::1::::<><><>0<>0<>08c2c8a695e7f1761d3335758c158d1d<>res://.godot/imported/ground_tiles.png-026f5970cbd02418ade9d5d2faaa3c5c.ctex::
+MAIN MENU.png::CompressedTexture2D::7441432267949547920::1773715807::1773715808::1::::<><><>0<>0<>341dc7f570a16109c94bee7ca3c3e23d<>res://.godot/imported/MAIN MENU.png-63687175369bd4631fe8bdc762dc9378.ctex::
+NPC SCRAPS-Recovered.png::CompressedTexture2D::5581485469716172594::1773715807::1773715811::1::::<><><>0<>0<>3e6566a514730331230942ba82f257cc<>res://.godot/imported/NPC SCRAPS-Recovered.png-97a6f0827d96b650e03daa36d3bd542d.ctex::
+SETTINGS 2.png::CompressedTexture2D::2794099116778935397::1773715807::1773715808::1::::<><><>0<>0<>e2fa6c08b57a63a54656cf56323582c4<>res://.godot/imported/SETTINGS 2.png-0e4dfbfed778a9e35208a61b9365aeb6.ctex::
+SETTINGS.png::CompressedTexture2D::8102605008841033704::1773715807::1773715809::1::::<><><>0<>0<>b83ffe40eed864c27afc627fd61d36e1<>res://.godot/imported/SETTINGS.png-51fb9d53290d461587ed4207d7ed3c36.ctex::
