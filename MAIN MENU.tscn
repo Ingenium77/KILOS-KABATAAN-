@@ -21,5 +21,21 @@ texture = ExtResource("1_iwmwd")
 
 [node name="Button" type="Button" parent="." unique_id=1748238660]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 1053.0
+offset_top = 2.0
+offset_right = 1141.0
+offset_bottom = 85.0
+
+[node name="Button2" type="Button" parent="." unique_id=162169530]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 475.0
+offset_right = 539.0
+offset_bottom = 610.0
+
+[node name="Button3" type="Button" parent="." unique_id=603803091]
+layout_mode = 0
+offset_left = 622.0
+offset_top = 467.0
+offset_right = 1107.0
+offset_bottom = 605.0
