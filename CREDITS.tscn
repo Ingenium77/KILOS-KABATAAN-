@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://bs2c01l34pttp"]
 
+[ext_resource type="Script" uid="uid://b8dad6bkppnny" path="res://credits.gd" id="1_6vsdt"]
+[ext_resource type="Texture2D" uid="uid://ctdugxt0gsm4h" path="res://HEL005 ARTS & DESIGN/Screenshot (1633).png" id="1_pcaas"]
+
 [node name="Credits" type="Control" unique_id=611563009]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +10,22 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_6vsdt")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=133105288]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_pcaas")
+
+[node name="Credits-Main Menu" type="Button" parent="TextureRect" unique_id=1123259660]
+layout_mode = 0
+offset_left = 1185.0
+offset_top = 35.0
+offset_right = 1335.0
+offset_bottom = 128.0
+
+[connection signal="pressed" from="TextureRect/Credits-Main Menu" to="." method="_on_credits_main_menu_pressed"]

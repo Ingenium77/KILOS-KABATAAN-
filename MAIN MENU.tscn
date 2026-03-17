@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cgsuwgke5iefr"]
 
+[ext_resource type="Script" uid="uid://dpdpn8xxun4f1" path="res://main_menu.gd" id="1_44d08"]
 [ext_resource type="Texture2D" uid="uid://b5td3rg5w1yxv" path="res://MAIN MENU.png" id="1_iwmwd"]
 
 [node name="MainMenu" type="Control" unique_id=187314477]
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_44d08")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1718691616]
 layout_mode = 1
@@ -19,23 +21,30 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_iwmwd")
 
-[node name="Button" type="Button" parent="." unique_id=1748238660]
-layout_mode = 0
-offset_left = 1053.0
-offset_top = 2.0
-offset_right = 1141.0
-offset_bottom = 85.0
-
-[node name="Button2" type="Button" parent="." unique_id=162169530]
+[node name="Play" type="Button" parent="." unique_id=162169530]
+show_behind_parent = true
 layout_mode = 0
 offset_left = 49.0
 offset_top = 475.0
 offset_right = 539.0
 offset_bottom = 610.0
 
-[node name="Button3" type="Button" parent="." unique_id=603803091]
+[node name="Credits" type="Button" parent="." unique_id=603803091]
+show_behind_parent = true
 layout_mode = 0
 offset_left = 622.0
 offset_top = 467.0
 offset_right = 1107.0
 offset_bottom = 605.0
+
+[node name="Settings" type="Button" parent="." unique_id=93349621]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 1051.0
+offset_top = -2.0
+offset_right = 1142.0
+offset_bottom = 86.0
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
