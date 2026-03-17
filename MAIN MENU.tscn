@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dpdpn8xxun4f1" path="res://scripts/main_menu.gd" id="1_44d08"]
 [ext_resource type="Texture2D" uid="uid://b5td3rg5w1yxv" path="res://MAIN MENU.png" id="1_iwmwd"]
 
-[node name="MainMenu" type="Control" unique_id=187314477]
+[node name="MainMenu" type="Control" unique_id=187314477 node_paths=PackedStringArray("play_button")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,7 +11,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_44d08")
-initial_scene = null
+initial_scene = &"uid://bwj5attdlec2i"
+play_button = NodePath("Play")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1718691616]
 layout_mode = 1

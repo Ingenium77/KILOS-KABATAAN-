@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 DialogueManager="*uid://c3rodes2l3gxb"
+SceneLoader="*uid://c81wg5hsl8i14"
 
 [editor_plugins]
 

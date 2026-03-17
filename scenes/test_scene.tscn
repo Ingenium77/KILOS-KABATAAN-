@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bwj5attdlec2i"]
+
+[ext_resource type="Texture2D" uid="uid://clryirixk5qhu" path="res://HEL005 ARTS & DESIGN/NPC SCRAPS-Recovered.png" id="1_g7g4h"]
+
+[node name="Test_Scene" type="Node2D" unique_id=1270128803]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=378747169]
+position = Vector2(466.1875, 348.3125)
+scale = Vector2(0.14084233, 0.09326626)
+texture = ExtResource("1_g7g4h")
