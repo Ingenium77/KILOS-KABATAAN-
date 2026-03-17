@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cgsuwgke5iefr"]
 
-[ext_resource type="Script" uid="uid://dpdpn8xxun4f1" path="res://scripts/main_menu.gd" id="1_44d08"]
+[ext_resource type="Script" uid="uid://dpdpn8xxun4f1" path="res://main_menu.gd" id="1_44d08"]
 [ext_resource type="Texture2D" uid="uid://b5td3rg5w1yxv" path="res://MAIN MENU.png" id="1_iwmwd"]
 
 [node name="MainMenu" type="Control" unique_id=187314477]
@@ -11,7 +11,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_44d08")
-initial_scene = null
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1718691616]
 layout_mode = 1
