@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cgsuwgke5iefr"]
 
-[ext_resource type="Script" uid="uid://dpdpn8xxun4f1" path="res://scripts/main_menu.gd" id="1_44d08"]
-[ext_resource type="Texture2D" uid="uid://b5td3rg5w1yxv" path="res://MAIN MENU.png" id="1_iwmwd"]
+[ext_resource type="Script" uid="uid://dpdpn8xxun4f1" path="res://scripts/main_menu.gd" id="1_dloib"]
+[ext_resource type="Texture2D" uid="uid://b5td3rg5w1yxv" path="res://HEL005 ARTS & DESIGN/MAIN MENU.png" id="2_gwy8g"]
 
 [node name="MainMenu" type="Control" unique_id=187314477 node_paths=PackedStringArray("play_button")]
 layout_mode = 3
@@ -10,7 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_44d08")
+script = ExtResource("1_dloib")
 initial_scene = &"uid://bwj5attdlec2i"
 play_button = NodePath("Play")
 
@@ -21,7 +21,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_iwmwd")
+texture = ExtResource("2_gwy8g")
 
 [node name="Settings" type="Button" parent="." unique_id=1748238660]
 show_behind_parent = true

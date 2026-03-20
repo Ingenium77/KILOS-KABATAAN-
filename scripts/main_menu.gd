@@ -6,12 +6,12 @@ extends Control
 
 
 func _on_settings_pressed() -> void:
-	SceneLoader.load_scene("res://SETTINGS.tscn")
+	SceneLoader.load_scene("res://scenes/SETTINGS.tscn")
 
 func _on_play_pressed() -> void:
-	SceneLoader.load_scene(initial_scene)
+	SceneLoader.load_scene("res://scenes/aiden test scene.tscn")
 	
 func _on_credits_pressed() -> void:
-	SceneLoader.load_scene("res://CREDITS.tscn")
+	SceneLoader.load_scene("res://scenes/CREDITS.tscn")
 	
 	
