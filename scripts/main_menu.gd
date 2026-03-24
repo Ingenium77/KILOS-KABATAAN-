@@ -9,7 +9,7 @@ func _on_settings_pressed() -> void:
 	SceneLoader.load_scene("res://scenes/SETTINGS.tscn")
 
 func _on_play_pressed() -> void:
-	SceneLoader.load_scene("res://scenes/aiden test scene.tscn")
+	SceneLoader.load_scene("res://scenes/MAIN MAP 1.tscn")
 	
 func _on_credits_pressed() -> void:
 	SceneLoader.load_scene("res://scenes/CREDITS.tscn")

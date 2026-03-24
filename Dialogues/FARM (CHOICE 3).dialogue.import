@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://70rlkh0iin8t"
+path="res://.godot/imported/FARM (CHOICE 3).dialogue-c364f080841e6887369db3291068e9dc.tres"
+
+[deps]
+
+source_file="res://Dialogues/FARM (CHOICE 3).dialogue"
+dest_files=["res://.godot/imported/FARM (CHOICE 3).dialogue-c364f080841e6887369db3291068e9dc.tres"]
+
+[params]
+
+defaults=true

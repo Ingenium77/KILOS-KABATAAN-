@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://bafd1icvrupct"]
+
+[ext_resource type="Script" uid="uid://dxj5sp30gkn6g" path="res://scripts/tatay_npc.gd" id="1_1bf3r"]
+[ext_resource type="Texture2D" uid="uid://ba5t0j1xcguue" path="res://HEL005 ARTS & DESIGN/TATAY NPC export.png" id="2_3rukx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5j8qp"]
+atlas = ExtResource("2_3rukx")
+region = Rect2(111, 74, 37, 37)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_56g0b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5j8qp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wowkn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gq5xh"]
+radius = 17.720045
+
+[node name="TATAY NPC" type="CharacterBody2D" unique_id=574901246]
+script = ExtResource("1_1bf3r")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=737073783]
+position = Vector2(6.999999, -4.999999)
+scale = Vector2(1.2567568, 1.2567568)
+sprite_frames = SubResource("SpriteFrames_56g0b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1775711957]
+position = Vector2(0, 7)
+shape = SubResource("CircleShape2D_wowkn")
+
+[node name="chat detection area" type="Area2D" parent="." unique_id=384257119]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chat detection area" unique_id=811986511]
+position = Vector2(0, 4)
+shape = SubResource("CircleShape2D_gq5xh")
+
+[connection signal="body_entered" from="chat detection area" to="." method="_on_chat_detection_area_body_entered"]
+[connection signal="body_exited" from="chat detection area" to="." method="_on_chat_detection_area_body_exited"]

@@ -141,12 +141,12 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_qwq0k"]
 radius = 17.029387
 
-[node name="PlayerCharacter" type="CharacterBody2D" unique_id=1075552158]
+[node name="PlayerCharacter" type="CharacterBody2D" unique_id=1075552158 groups=["Player"]]
 script = ExtResource("1_6r27q")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=50120768]
-position = Vector2(0, 2.3841858e-07)
-scale = Vector2(1.3428571, 1.1486486)
+position = Vector2(0, -2)
+scale = Vector2(1.5857143, 1.277027)
 sprite_frames = SubResource("SpriteFrames_2w5w8")
 animation = &"right"
 autoplay = "down"
