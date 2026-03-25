@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dphnr54ci4564"
+path="res://.godot/imported/OUTSIDE BRGY HALL.dialogue-9a36816f7b6487b4811eb0c71300b41d.tres"
+
+[deps]
+
+source_file="res://Dialogues/OUTSIDE BRGY HALL.dialogue"
+dest_files=["res://.godot/imported/OUTSIDE BRGY HALL.dialogue-9a36816f7b6487b4811eb0c71300b41d.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bhvj1qsp1mvlj"]
+
+[ext_resource type="Script" uid="uid://cnysnurxsvkhk" path="res://scripts/main_map_1.gd" id="1_65uwa"]
+[ext_resource type="Texture2D" uid="uid://d4bvj06m8f0fb" path="res://HEL005 ARTS & DESIGN/Screenshot (1643).png" id="2_qom0y"]
+
+[node name="MainMap1" type="Node2D" unique_id=1405143156]
+script = ExtResource("1_65uwa")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=605429599]
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1154.0
+offset_bottom = 646.0
+texture = ExtResource("2_qom0y")
+
+[node name="Go to House" type="Button" parent="." unique_id=1434426581]
+offset_left = 551.0
+offset_top = 19.0
+offset_right = 863.0
+offset_bottom = 217.0
+
+[node name="Settings" type="Button" parent="." unique_id=1010386188]
+offset_left = 1044.0
+offset_right = 1151.0
+offset_bottom = 110.0
+
+[node name="Home" type="Button" parent="." unique_id=772207926]
+offset_right = 114.0
+offset_bottom = 122.0
+
+[connection signal="pressed" from="Go to House" to="." method="_on_go_to_house_pressed"]
+[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Home" to="." method="_on_home_pressed"]
