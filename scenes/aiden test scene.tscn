@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://cojij8x2dofhs"]
+
+[ext_resource type="Texture2D" uid="uid://cfkcyy3aswe1l" path="res://HEL005 ARTS & DESIGN/Screenshot (1641).png" id="1_gy7eo"]
+[ext_resource type="PackedScene" uid="uid://bebvew7s54opu" path="res://scenes/player_character.tscn" id="2_tiep7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5av4d"]
+size = Vector2(908, 307)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6bchc"]
+size = Vector2(1092, 102)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kr2gd"]
+size = Vector2(45, 524)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_byg24"]
+size = Vector2(366, 608)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o5oo1"]
+size = Vector2(285, 109)
+
+[node name="TestScene 2" type="Node2D" unique_id=94483326]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1770068772]
+offset_left = -470.0
+offset_top = -326.0
+offset_right = 625.0
+offset_bottom = 283.0
+texture = ExtResource("1_gy7eo")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1185921827]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=494560123]
+position = Vector2(170, -172.5)
+shape = SubResource("RectangleShape2D_5av4d")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1001188119]
+position = Vector2(80, 233)
+shape = SubResource("RectangleShape2D_6bchc")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1547977090]
+position = Vector2(-447.5, -68)
+shape = SubResource("RectangleShape2D_kr2gd")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=439420436]
+position = Vector2(804, -23)
+shape = SubResource("RectangleShape2D_byg24")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=917958161]
+position = Vector2(-319, -382)
+shape = SubResource("RectangleShape2D_o5oo1")
+
+[node name="PlayerCharacter" parent="." unique_id=1075552158 instance=ExtResource("2_tiep7")]
+position = Vector2(-373, -306)
+
+[node name="Camera2D" type="Camera2D" parent="PlayerCharacter" unique_id=2034867651]
+position = Vector2(4, 2)
+zoom = Vector2(2, 2)
