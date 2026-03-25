@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://db1hcoyyy26a5"]
+
+[ext_resource type="Script" uid="uid://cw3twemflr16x" path="res://scenes/quest_box.gd" id="1_glms7"]
+[ext_resource type="Texture2D" uid="uid://cxwws7t6tefln" path="res://HEL005 ARTS & DESIGN/quest box.png" id="1_ndw57"]
+
+[node name="GameManager" type="Node" unique_id=2061471226]
+script = ExtResource("1_glms7")
+
+[node name="QuestBox" type="CanvasLayer" parent="." unique_id=1899302341]
+
+[node name="Background" type="Sprite2D" parent="QuestBox" unique_id=1833543303]
+position = Vector2(190, 103)
+texture = ExtResource("1_ndw57")
+
+[node name="QuestTitle" type="RichTextLabel" parent="QuestBox" unique_id=1310667594]
+offset_left = 12.0
+offset_top = 7.0
+offset_right = 143.0
+offset_bottom = 36.0
+text = "Quest Title"
+
+[node name="QuestDescription" type="RichTextLabel" parent="QuestBox" unique_id=2022346099]
+modulate = Color(0.9137255, 0.7254902, 0.18431373, 1)
+offset_left = 12.0
+offset_top = 41.0
+offset_right = 200.0
+offset_bottom = 81.0
+text = "Quest Description"
