@@ -23,3 +23,15 @@ Fixer: I can fix it for a small payment.
 	Fixer: But it might take a long time for your aid to come.
 	do QuestManager.start_quest("back_to_house")
 => END
+
+~ locked
+if QuestManager.is_quest_completed("check_list")
+	Game Notification: Talk to the staff first before talking to the fixer.
+	=> END
+elif not QuestManager.is_quest_completed("talk_to_fixer")
+	Game Notification: Find a way to settle your aid before going home.
+	=> END
+else
+	# All done - shouldn't reach here, but just in case
+	=> END
+=> END
