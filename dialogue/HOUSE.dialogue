@@ -7,14 +7,36 @@ Tatay: Yes. Check if my name is on the list.
 	Tatay: Thank you, son. I’ll wait here.
 	Mateo: I’ll come back after I check the list.
 	Tatay: Be careful on the way, okay?
+	=> finish_quest
 - What if it’s not there?
 	Mateo: What if it’s not there?
 	Tatay: Then we’ll find another way.
 	Mateo: I’ll still check the list.
 	Tatay: Thank you for helping me, son.
+	=> finish_quest
+
 - Are you sure that we've already applied?
 	Mateo: Are you sure that we've already applied?
 	Tatay: Yes. I submitted the form myself.
 	Mateo: Okay then, I’ll go check the list now.
 	Tatay: I hope my name is there.
+	=> finish_quest
+=> END
+
+~ finish_quest
+do QuestHud.show()
+do QuestManager.finish_quest("talk_to_tatay", 2)
+
+=> END
+
+~ locked
+if not QuestManager.is_quest_completed("remove_something")
+	Tatay: You haven't removed that thing yet!
+	=> END
+elif not QuestManager.is_quest_completed("talk_to_tatay")
+	NPC: You need to talk to Tatay first!
+	=> END
+else
+	# All done - shouldn't reach here, but just in case
+	=> END
 => END
