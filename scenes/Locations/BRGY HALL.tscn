@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://duu3tbfqdk6u4" path="res://scenes/passage_trigger.tscn" id="5_q3e40"]
 [ext_resource type="PackedScene" uid="uid://cvru4dhclsrkb" path="res://scenes/Characters/staff_npc.tscn" id="5_y4ukx"]
 [ext_resource type="PackedScene" uid="uid://c22ftj6edm2s3" path="res://scenes/Characters/FIXER NPC.tscn" id="6_q3e40"]
+[ext_resource type="Resource" uid="uid://b5xt5dmi0nfj6" path="res://dialogue/BRGY HALL.dialogue" id="6_r4byn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wb0uu"]
 size = Vector2(955, 321)
@@ -52,7 +53,9 @@ position = Vector2(949, 381)
 
 [node name="PassageTrigger" parent="." unique_id=968975390 instance=ExtResource("5_q3e40")]
 position = Vector2(72.30878, -131.76138)
+required_quests = Array[String](["check_list", "talk_to_fixer"])
 target_scene = "res://scripts/locations/main_map.gd"
+dialogue_resource = ExtResource("6_r4byn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PassageTrigger" unique_id=919725459]
 position = Vector2(42.691223, 151.82104)

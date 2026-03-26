@@ -21,19 +21,16 @@ Staff: Next! What do you need?
 		do QuestManager.reach_goal("check_list")
 		do QuestManager.finish_quest("check_list")
 		do QuestManager.start_quest("talk_to_fixer")
-- Ah, nothing.
-	Mateo: Ah, nothing.
-	Staff: Alright, next!
-	do QuestManager.finish_quest("check_list")
-	do QuestManager.start_quest("talk_to_fixer")
+		
+		~ locked
+if not QuestManager.is_quest_completed("check_list")
+	Game Notification: Talk to the staff first before going home!
 	=> END
-	
-~ locked
-if not QuestManager.is_quest_completed("go_to_brgy_hall")
-	Game: Talk to the staff first before going home.
+elif not QuestManager.is_quest_completed("talk_to_fixer")
+	Game Notification: You need to talk to the fixer first!
 	=> END
 else
 	# All done - shouldn't reach here, but just in case
 	=> END
 
-=> END
+	
