@@ -1,0 +1,70 @@
+extends Area2D
+
+@export var required_quests: Array[String] = []  # Multiple quests required
+@export var target_scene: String = "<Location Here Replace this>"
+@export var dialogue_resource: DialogueResource
+@export var dialogue_start: String = "locked"  # Configurable start node
+
+var is_triggered: bool = false
+
+func _on_body_entered(body: Node2D) -> void:
+	if not body.is_in_group("Player"):
+		return
+	
+	if is_triggered:
+		return
+	
+	# Check if ALL required quests are complete
+	if are_all_quests_complete():
+		SceneLoader.load_scene(target_scene)
+		return
+	
+	# Some quests not complete - STOP PLAYER and show dialogue
+	is_triggered = true
+	
+	# FREEZE PLAYER
+	body.set_physics_process(false)
+	body.velocity = Vector2.ZERO
+	
+	# Show dialogue
+	if dialogue_resource:
+		show_locked_dialogue(body)
+	else:
+		await get_tree().create_timer(1.0).timeout
+		release_player(body)
+
+func are_all_quests_complete() -> bool:
+	# No requirements = always allowed
+	if required_quests.is_empty():
+		return true
+	
+	# Check all required quests
+	for quest_id in required_quests:
+		if not QuestManager.is_quest_completed(quest_id):
+			return false
+	
+	return true
+
+func get_incomplete_quests() -> Array[String]:
+	# Returns list of incomplete quest IDs (for dialogue logic)
+	var incomplete: Array[String] = []
+	for quest_id in required_quests:
+		if not QuestManager.is_quest_completed(quest_id):
+			incomplete.append(quest_id)
+	return incomplete
+
+func show_locked_dialogue(player: CharacterBody2D) -> void:
+	var Balloon = preload("res://dialogue/Balloon/balloon.tscn")
+	var balloon = Balloon.instantiate()
+	get_tree().current_scene.add_child(balloon)
+	
+	DialogueManager.dialogue_ended.connect(
+		func(_r): release_player(player), 
+		CONNECT_ONE_SHOT
+	)
+	
+	balloon.start(dialogue_resource, dialogue_start)
+
+func release_player(player: CharacterBody2D) -> void:
+	player.set_physics_process(true)
+	is_triggered = false

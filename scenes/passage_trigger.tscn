@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://duu3tbfqdk6u4"]
+
+[ext_resource type="Script" uid="uid://dioaqwytytu2x" path="res://scripts/passage_trigger.gd" id="1_3agwg"]
+[ext_resource type="Resource" uid="uid://b4k2wlensv3x3" path="res://dialogue/HOUSE.dialogue" id="2_vc04n"]
+
+[node name="PassageTrigger" type="Area2D" unique_id=968975390]
+script = ExtResource("1_3agwg")
+dialogue_resource = ExtResource("2_vc04n")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
