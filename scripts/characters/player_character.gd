@@ -7,19 +7,18 @@ extends CharacterBody2D
 
 var input_vector: Vector2 = Vector2.ZERO
 
-
 func _physics_process(delta):
 	move_and_slide()
 	update_animation()
 
 
 func update_animation():
-	if velocity == Vector2.ZERO:
+	if input_vector == Vector2.ZERO:
 		sprite.stop()
 		return
 	
-	if abs(velocity.x) > abs(velocity.y):
-		if velocity.x > 0:
+	if abs(input_vector.x) > abs(input_vector.y):
+		if input_vector.x > 0:
 			sprite.play("right")
 			direction.rotation = -PI / 2  # Right (-90°)
 			
@@ -28,7 +27,7 @@ func update_animation():
 			direction.rotation = PI / 2  # Left (90°)
 			
 	else:
-		if velocity.y > 0:
+		if input_vector.y > 0:
 			sprite.play("down")
 			direction.rotation = 0  # Down (0°)
 		
@@ -52,6 +51,7 @@ func _unhandled_input(_event: InputEvent) -> void:
 		velocity = input_vector * SPEED
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, SPEED)
+
 
 func _input(event):
 	if event.is_action_pressed("quest_log"):

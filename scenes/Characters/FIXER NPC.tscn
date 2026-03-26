@@ -41,6 +41,7 @@ shape = SubResource("RectangleShape2D_afcsl")
 
 [node name="Actionable" parent="." unique_id=1160440308 instance=ExtResource("3_402ww")]
 dialogue_resource = ExtResource("4_tvoda")
+dialogue_start = "locked"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable" unique_id=1933662607]
 position = Vector2(3, 4)

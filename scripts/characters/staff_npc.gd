@@ -25,8 +25,3 @@ func _process(_delta: float) -> void:
 	elif player_in_range:
 		talk_label.show()
 		
-func check_list_something() -> void:
-	QuestManager.reach_goal("check_list")
-	await get_tree().create_timer(3.0).timeout
-	QuestManager.finish_quest("check_list",2)
-	QuestManager.start_quest("back_to_house")

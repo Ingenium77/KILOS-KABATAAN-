@@ -3,9 +3,6 @@ extends Node2D
 @onready var brgy_hall: Button = $"Brgy Hall"
 
 func _ready():
-	# Connect to unlock signal
-	QuestManager.area_unlocked.connect(_on_area_unlocked)
-	
 	# Check if already unlocked (in case we return to this scene)
 	update_buttons()
 
@@ -20,13 +17,6 @@ func update_buttons():
 	brgy_hall.disabled = true
 	brgy_hall.modulate = Color.GRAY  # Locked appearance
 	
-	# Check if any completed quest unlocks this area
-	#for quest_id in QuestManager.completed_quests:
-		#var quest = QuestManager.available_quests.get(quest_id)
-		#if quest and quest.unlock_area == "brgy_hall":
-			#brgy_hall.disabled = false
-			#brgy_hall.modulate = Color.WHITE
-			#break
 	if QuestManager.is_quest_completed("remove_something"):
 			brgy_hall.disabled = false
 			brgy_hall.text = ""

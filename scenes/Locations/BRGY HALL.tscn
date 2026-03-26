@@ -53,8 +53,9 @@ position = Vector2(949, 381)
 
 [node name="PassageTrigger" parent="." unique_id=968975390 instance=ExtResource("5_q3e40")]
 position = Vector2(72.30878, -131.76138)
-required_quests = Array[String](["check_list", "talk_to_fixer"])
-target_scene = "res://scripts/locations/main_map.gd"
+required_done_quests = Array[String](["talk_to_fixer"])
+required_active_quests = Array[String](["back_to_house"])
+target_scene = "res://scenes/Locations/main_map.tscn"
 dialogue_resource = ExtResource("6_r4byn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PassageTrigger" unique_id=919725459]
