@@ -1,36 +1,35 @@
 ~ start
-Staff: Next! What do you need?
-- Why isn’t my father’s name on the list?
-	Staff: If it’s not on the list, it’s not on the list.
-	Mateo: But we applied for the aid.
-	Staff: If you have a complaint, file a report.
-	Mateo: Where do I file it?
-	Staff: Just sign this form here and submit it to me after.
-	Staff: Just letting you know, complaints take a long time to be processed here. So, don't expect your issue to be fixed by the offices instantly.
-	- Sign and submit the complaint form.
-		Game Notification: Submitted complain form.
-		Your Rights (Filing Complaints): Filing a complaint about unfair government aid is your right. Government offices must provide fair and transparent services.
-		Republic Act No. 9485 (Anti-Red Tape Act): This law requires government offices to provide services efficiently and transparently. In the game, filing a complaint ensures your concern is officially recorded, highlighting that you are using proper channels instead of letting corruption decide.
-		Republic Act No. 6713 (Code of Conduct and Ethical Standards for Public Officials): Public officials must act with integrity and fairness. By filing a complaint, Mateo is holding the staff accountable and reinforcing ethical behavior in the system.
-		do QuestManager.reach_goal("check_list")
-		do QuestManager.finish_quest("check_list")
-		do QuestManager.start_quest("back_to_house")
-	- Don't sign the complaint form and find another way for the aid to come faster.
-		Mateo: No, thank you. I'll do something else instead.
-		Staff: Ok, sir. Next!
-		do QuestManager.reach_goal("check_list")
-		do QuestManager.finish_quest("check_list")
-		do QuestManager.start_quest("talk_to_fixer")
-		
-		~ locked
-if not QuestManager.is_quest_completed("check_list")
-	Game Notification: Talk to the staff first before going home!
-	=> END
-elif not QuestManager.is_quest_completed("talk_to_fixer")
-	Game Notification: You need to talk to the fixer first!
-	=> END
+if not QuestManager.is_quest_completed()
+	Staff: Next! What do you need?
+	- Why isn’t my father’s name on the list?
+		Staff: If it’s not on the list, it’s not on the list.
+		Mateo: But we applied for the aid.
+		Staff: If you have a complaint, file a report.
+		Mateo: Where do I file it?
+		Staff: Just sign this form here and submit it to me after.
+		Staff: Just letting you know, complaints take a long time to be processed here. So, don't expect your issue to be fixed by the offices instantly.
+		- Sign and submit the complaint form.
+			Game Notification: Submitted complain form.
+			Your Rights (Filing Complaints): Filing a complaint about unfair government aid is your right. Government offices must provide fair and transparent services.
+			Republic Act No. 9485 (Anti-Red Tape Act): This law requires government offices to provide services efficiently and transparently. In the game, filing a complaint ensures your concern is officially recorded, highlighting that you are using proper channels instead of letting corruption decide.
+			Republic Act No. 6713 (Code of Conduct and Ethical Standards for Public Officials): Public officials must act with integrity and fairness. By filing a complaint, Mateo is holding the staff accountable and reinforcing ethical behavior in the system.
+			do QuestHud.show()
+			do QuestManager.finish_quest("check_list")
+			do QuestManager.start_quest("back_to_house")
+		- Don't sign the complaint form and find another way for the aid to come faster.
+			Mateo: No, thank you. I'll do something else instead.
+			Staff: Ok, sir. Next!
+			do QuestHud.show()
+			do QuestManager.finish_quest("check_list")
+			do QuestManager.start_quest("talk_to_fixer")
 else
-	# All done - shouldn't reach here, but just in case
+	Game Notification: You already talked to the Staff!
+		
+~ locked
+if QuestManager.is_quest_active("talk_to_fixer")
+	Game Notification: You should talk to the fixer first before leaving!
 	=> END
-
-	
+elif not QuestManager.is_quest_completed("check_list")
+	Game Notification: Talk to the staff first before leaving!
+	=> END
+=> END

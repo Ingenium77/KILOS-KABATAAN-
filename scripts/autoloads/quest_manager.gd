@@ -1,11 +1,9 @@
 extends Node
 
 signal quest_started(quest_id)
-signal quest_updated(quest_id)
 signal quest_reached_goal(quest_id)
 signal quest_finished(quest_id)
 signal quest_chain_unlocked(quest_id)
-signal area_unlocked(area_id: String) 
 
 var active_quests: Dictionary = {}      
 var completed_quests: Array = []       
@@ -59,21 +57,6 @@ func start_quest(quest_id: String) -> bool:
 	quest_started.emit(quest_id)
 	return true
 
-func update_objective(quest_id: String, objective_id: String, amount: int = 1):
-	if not quest_id in active_quests:
-		return
-	
-	var quest = active_quests[quest_id]
-	var obj = quest.get_objective(objective_id)
-	if not obj:
-		return
-	
-	obj.current = min(obj.current + amount, obj.target)
-	quest_updated.emit(quest_id)
-	
-	if quest.is_complete() and quest.status == Quest.Status.STARTED:
-		reach_goal(quest_id)
-
 func reach_goal(quest_id: String):
 	if not quest_id in active_quests:
 		return
@@ -82,7 +65,7 @@ func reach_goal(quest_id: String):
 	quest.status = Quest.Status.REACHED_GOAL
 	quest_reached_goal.emit(quest_id)
 
-func finish_quest(quest_id: String, delay: float = 0.0):
+func finish_quest(quest_id: String, delay: float = 1.0):
 	
 	if not quest_id in active_quests:
 		return
@@ -107,10 +90,6 @@ func finish_quest(quest_id: String, delay: float = 0.0):
 	active_quests.erase(quest_id)
 	quest_finished.emit(quest_id)
 	
-
-	for area_id in quest.unlock_areas:
-		area_unlocked.emit(area_id)
-		print("Area unlocked: ", area_id)
 	
 	# Chain quests...
 	for next_id in quest.next_quests:
@@ -123,3 +102,6 @@ func get_quest(quest_id: String) -> Quest:
 
 func is_quest_completed(quest_id: String) -> bool:
 	return quest_id in completed_quests
+	
+func is_quest_active(quest_id: String) -> bool:
+	return quest_id in active_quests

@@ -1,6 +1,5 @@
 [gd_resource type="Resource" script_class="Quest" format=3 uid="uid://btggmxrt00f0x"]
 
-[ext_resource type="Script" uid="uid://cvbaoko12dgmk" path="res://scripts/quest_objective.gd" id="1_evq61"]
 [ext_resource type="Script" uid="uid://bb3m8rauu0lss" path="res://scripts/quest.gd" id="2_6c8so"]
 
 [resource]
@@ -10,4 +9,5 @@ title = "Talk to Fixer"
 description = "Talk to the stranger and see what he wants.
 "
 completion_text = "Paid the fixer to get Tatay enlisted."
+next_quests = Array[String](["back_to_house"])
 metadata/_custom_type_script = "uid://bb3m8rauu0lss"

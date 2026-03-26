@@ -1,6 +1,10 @@
 extends Area2D
 
-@export var required_quests: Array[String] = []  # Multiple quests required
+
+@export var required_done_quests: Array[String] = []
+@export var require_all_quests: bool = true  # true = AND logic, false = OR logic
+@export var required_active_quests: Array[String] = []
+
 @export var target_scene: String = "<Location Here Replace this>"
 @export var dialogue_resource: DialogueResource
 @export var dialogue_start: String = "locked"  # Configurable start node
@@ -34,24 +38,45 @@ func _on_body_entered(body: Node2D) -> void:
 		release_player(body)
 
 func are_all_quests_complete() -> bool:
-	# No requirements = always allowed
-	if required_quests.is_empty():
+	var has_active_reqs = not required_active_quests.is_empty()
+	var has_done_reqs = not required_done_quests.is_empty()
+	#	Check active quest requirements
+	if not has_active_reqs and not has_done_reqs:
 		return true
-	
-	# Check all required quests
-	for quest_id in required_quests:
-		if not QuestManager.is_quest_completed(quest_id):
-			return false
-	
-	return true
+			
+	if require_all_quests:
+		# AND logic - every quest in both lists must be active or completed
+		for quest_id in required_active_quests:
+			if not QuestManager.is_quest_active(quest_id) and not QuestManager.is_quest_completed(quest_id):
+				return false
+		for quest_id in required_done_quests:
+			if not QuestManager.is_quest_completed(quest_id):
+				return false
+		return true
+	else:
+		# OR logic - at least one from either list passes
+		for quest_id in required_active_quests:
+			if QuestManager.is_quest_active(quest_id) or QuestManager.is_quest_completed(quest_id):
+				return true
+		for quest_id in required_done_quests:
+			if QuestManager.is_quest_completed(quest_id):
+				return true
+		return false
 
 func get_incomplete_quests() -> Array[String]:
-	# Returns list of incomplete quest IDs (for dialogue logic)
-	var incomplete: Array[String] = []
-	for quest_id in required_quests:
-		if not QuestManager.is_quest_completed(quest_id):
-			incomplete.append(quest_id)
-	return incomplete
+	if require_all_quests:
+		# AND mode: all incomplete ones are "blocking"
+		var incomplete: Array[String] = []
+		for quest_id in required_done_quests:
+			if not QuestManager.is_quest_completed(quest_id):
+				incomplete.append(quest_id)
+		return incomplete
+	else:
+		# OR mode: if any quest is done, nothing is blocking
+		for quest_id in required_done_quests:
+			if QuestManager.is_quest_completed(quest_id):
+				return []  # unlocked, no blockers
+		return required_done_quests  # none complete, all are "blockers"
 
 func show_locked_dialogue(player: CharacterBody2D) -> void:
 	var Balloon = preload("res://dialogue/Balloon/balloon.tscn")
