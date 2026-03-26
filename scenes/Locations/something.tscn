@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bb0av348i7bdx"]
+
+[ext_resource type="Script" uid="uid://dad6s54umn05w" path="res://scripts/something.gd" id="1_j8ue5"]
+[ext_resource type="Texture2D" uid="uid://00mh042pp82t" path="res://HEL005 ARTS & DESIGN/ground_tiles.png" id="2_4ho5t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2yyrm"]
+size = Vector2(16, 33)
+
+[node name="Something" type="StaticBody2D" unique_id=886837119]
+script = ExtResource("1_j8ue5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=794138623]
+texture = ExtResource("2_4ho5t")
+region_enabled = true
+region_rect = Rect2(0, 127, 16, 33)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1757884939]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_2yyrm")
+
+[node name="Label" type="Label" parent="." unique_id=118499470]
+offset_left = -42.0
+offset_top = -45.0
+offset_right = 42.0
+offset_bottom = -22.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Something"

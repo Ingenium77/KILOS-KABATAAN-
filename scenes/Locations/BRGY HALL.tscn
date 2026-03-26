@@ -1,7 +1,14 @@
 [gd_scene format=3 uid="uid://cp6231i4o2lw7"]
 
-[ext_resource type="Texture2D" uid="uid://cfkcyy3aswe1l" path="res://HEL005 ARTS & DESIGN/Screenshot (1641).png" id="1_puh5m"]
-[ext_resource type="PackedScene" uid="uid://bebvew7s54opu" path="res://scenes/player_character.tscn" id="2_wb0uu"]
+[ext_resource type="Texture2D" uid="uid://cfkcyy3aswe1l" path="res://HEL005 ARTS & DESIGN/Screenshot (1641).png" id="1_p3f41"]
+[ext_resource type="Script" uid="uid://v7ejji5pq6vg" path="res://scenes/Locations/brgy_hall.gd" id="1_qcv0j"]
+[ext_resource type="PackedScene" uid="uid://bebvew7s54opu" path="res://scenes/Characters/player_character.tscn" id="2_qcv0j"]
+[ext_resource type="PackedScene" uid="uid://bb0av348i7bdx" path="res://scenes/Locations/something.tscn" id="2_rpu8k"]
+[ext_resource type="PackedScene" uid="uid://nfm3u8mtlswp" path="res://scenes/actionable.tscn" id="3_y4ukx"]
+[ext_resource type="Resource" uid="uid://b5xt5dmi0nfj6" path="res://dialogue/BRGY HALL.dialogue" id="4_q3e40"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y4ukx"]
+height = 36.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wb0uu"]
 size = Vector2(955, 321)
@@ -16,13 +23,24 @@ size = Vector2(1093, 133)
 size = Vector2(155, 206)
 
 [node name="BrgyHall" type="Node2D" unique_id=1622498289]
+script = ExtResource("1_qcv0j")
+
+[node name="Something" parent="." unique_id=886837119 instance=ExtResource("2_rpu8k")]
+z_index = 3
+position = Vector2(348, 345)
+
+[node name="Actionable" parent="Something" unique_id=1160440308 instance=ExtResource("3_y4ukx")]
+dialogue_resource = ExtResource("4_q3e40")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Something/Actionable" unique_id=2127512158]
+shape = SubResource("CapsuleShape2D_y4ukx")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1211095629]
 offset_right = 1148.0
 offset_bottom = 644.0
-texture = ExtResource("1_puh5m")
+texture = ExtResource("1_p3f41")
 
-[node name="PlayerCharacter" parent="." unique_id=1075552158 instance=ExtResource("2_wb0uu")]
+[node name="PlayerCharacter" parent="." unique_id=1075552158 instance=ExtResource("2_qcv0j")]
 position = Vector2(108, 35)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=538834397]

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://3pisl5107d8q"]
 
-[ext_resource type="Texture2D" uid="uid://cfkcyy3aswe1l" path="res://HEL005 ARTS & DESIGN/Screenshot (1641).png" id="1_j8exf"]
-[ext_resource type="PackedScene" uid="uid://bebvew7s54opu" path="res://scenes/player_character.tscn" id="2_s3c0l"]
-[ext_resource type="Script" uid="uid://dwbxig6ey6nc2" path="res://scripts/farm_to_main_map_2.gd" id="3_eqb6v"]
+[ext_resource type="Texture2D" uid="uid://cfkcyy3aswe1l" path="res://HEL005 ARTS & DESIGN/Screenshot (1641).png" id="1_t1ol3"]
+[ext_resource type="PackedScene" uid="uid://bebvew7s54opu" path="res://scenes/Characters/player_character.tscn" id="2_xs3se"]
+[ext_resource type="PackedScene" uid="uid://duu3tbfqdk6u4" path="res://scenes/passage_trigger.tscn" id="4_xs3se"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pqhvp"]
 size = Vector2(955, 326)
@@ -21,14 +21,10 @@ size = Vector2(78.5, 194.5)
 [node name="TextureRect" type="TextureRect" parent="." unique_id=725143651]
 offset_right = 1148.0
 offset_bottom = 644.0
-texture = ExtResource("1_j8exf")
+texture = ExtResource("1_t1ol3")
 
-[node name="PlayerCharacter" parent="." unique_id=1075552158 instance=ExtResource("2_s3c0l")]
+[node name="PlayerCharacter" parent="." unique_id=1075552158 instance=ExtResource("2_xs3se")]
 position = Vector2(119, 48)
-
-[node name="Camera2D" type="Camera2D" parent="PlayerCharacter" unique_id=2092675404]
-position = Vector2(7, 3)
-zoom = Vector2(3.555, 3.555)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=999369503]
 
@@ -44,12 +40,19 @@ shape = SubResource("RectangleShape2D_eqb6v")
 position = Vector2(599, 594)
 shape = SubResource("RectangleShape2D_ohx85")
 
-[node name="Farm to Main Map 2" type="Area2D" parent="." unique_id=1834837500]
-script = ExtResource("3_eqb6v")
+[node name="Label" type="Label" parent="." unique_id=430460168]
+offset_left = 516.0
+offset_top = 248.0
+offset_right = 662.0
+offset_bottom = 307.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 43
+text = "FARM"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Farm to Main Map 2" unique_id=1232388852]
+[node name="PassageTrigger" parent="." unique_id=968975390 instance=ExtResource("4_xs3se")]
+target_scene = "res://scenes/Locations/main_map.tscn"
+dialogue_resource = null
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PassageTrigger" unique_id=1232388852]
 position = Vector2(1107.75, 429.75)
 shape = SubResource("RectangleShape2D_hjxv5")
-
-[connection signal="body_entered" from="Farm to Main Map 2" to="Farm to Main Map 2" method="_on_body_entered"]
-[connection signal="body_exited" from="Farm to Main Map 2" to="Farm to Main Map 2" method="_on_body_exited"]

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bebvew7s54opu"]
 
-[ext_resource type="Script" uid="uid://wsmq055uwbbd" path="res://scripts/player_character.gd" id="1_6r27q"]
+[ext_resource type="Script" uid="uid://wsmq055uwbbd" path="res://scripts/characters/player_character.gd" id="1_6r27q"]
 [ext_resource type="Texture2D" uid="uid://c1ermxjx766wc" path="res://HEL005 ARTS & DESIGN/Pixel_perfect_MC.png" id="1_56udc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6r27q"]
@@ -138,20 +138,35 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_qwq0k"]
-radius = 17.029387
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6r27q"]
+size = Vector2(29, 34)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6r27q"]
 
 [node name="PlayerCharacter" type="CharacterBody2D" unique_id=1075552158 groups=["Player"]]
 script = ExtResource("1_6r27q")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=58442097]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=50120768]
 position = Vector2(0, -2)
 scale = Vector2(1.5857143, 1.277027)
 sprite_frames = SubResource("SpriteFrames_2w5w8")
-animation = &"right"
+animation = &"left"
 autoplay = "down"
 speed_scale = 2.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=419487244]
-position = Vector2(7, 2)
-shape = SubResource("CircleShape2D_qwq0k")
+position = Vector2(7, 0)
+shape = SubResource("RectangleShape2D_6r27q")
+
+[node name="Direction" type="Marker2D" parent="." unique_id=46643278]
+position = Vector2(7, 0)
+
+[node name="ActionableFinder" type="Area2D" parent="Direction" unique_id=1826174222]
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Direction/ActionableFinder" unique_id=555672740]
+position = Vector2(0, 17)
+shape = SubResource("CircleShape2D_6r27q")
