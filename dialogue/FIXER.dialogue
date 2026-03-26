@@ -21,6 +21,8 @@ Fixer: I can fix it for a small payment.
 	Mateo: No, thank you. I won't be paying.
 	Fixer: Eh, suit yourself.
 	Fixer: But it might take a long time for your aid to come.
+	do QuestHud.show()
+	do QuestManager.finish_quest("talk_to_fixer", 2)
 	do QuestManager.start_quest("back_to_house")
 => END
 

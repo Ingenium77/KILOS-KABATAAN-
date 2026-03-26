@@ -12,6 +12,8 @@ Staff: Next! What do you need?
 		Your Rights (Filing Complaints): Filing a complaint about unfair government aid is your right. Government offices must provide fair and transparent services.
 		Republic Act No. 9485 (Anti-Red Tape Act): This law requires government offices to provide services efficiently and transparently. In the game, filing a complaint ensures your concern is officially recorded, highlighting that you are using proper channels instead of letting corruption decide.
 		Republic Act No. 6713 (Code of Conduct and Ethical Standards for Public Officials): Public officials must act with integrity and fairness. By filing a complaint, Mateo is holding the staff accountable and reinforcing ethical behavior in the system.
+		do QuestHud.show()
+	do QuestManager.finish_quest("talk_to_fixer", 2)
 		do QuestManager.reach_goal("check_list")
 		do QuestManager.finish_quest("check_list")
 		do QuestManager.start_quest("back_to_house")
@@ -25,6 +27,8 @@ Staff: Next! What do you need?
 - Ah, nothing.
 	Mateo: Ah, nothing
 	Staff: Ok, sir. Next!
+	do QuestHud.show()
+	do QuestManager.finish_quest("talk_to_fixer", 2)
 	do QuestManager.reach_goal("check_list")
 	do QuestManager.finish_quest("check_list")
 	do QuestManager.start_quest("back_to_house")

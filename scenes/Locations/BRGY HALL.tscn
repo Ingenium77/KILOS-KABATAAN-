@@ -53,7 +53,7 @@ position = Vector2(949, 381)
 
 [node name="PassageTrigger" parent="." unique_id=968975390 instance=ExtResource("5_q3e40")]
 position = Vector2(72.30878, -131.76138)
-required_quests = Array[String](["check_list", "talk_to_fixer"])
+required_quests = Array[String](["check_list"])
 target_scene = "res://scripts/locations/main_map.gd"
 dialogue_resource = ExtResource("6_r4byn")
 
