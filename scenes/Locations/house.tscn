@@ -78,8 +78,8 @@ position = Vector2(265, 72)
 shape = SubResource("CircleShape2D_4c1g4")
 
 [node name="PassageTrigger" parent="." unique_id=968975390 instance=ExtResource("8_36t42")]
-required_quests = Array[String](["remove_something", "talk_to_tatay"])
-target_scene = "res://scenes/Locations/FARM.tscn"
+target_scene = "res://scenes/Locations/main_map.tscn"
+dialogue_resource = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PassageTrigger" unique_id=1597020504]
 position = Vector2(573.25, 82)

@@ -7,7 +7,9 @@
 script = ExtResource("2_x61m1")
 id = "remove_something"
 title = "Remove Something"
-description = "Theres something in the house, remove it"
-completion_text = "something has been removed"
+description = "There's a piece of trash on the yard, remove it.
+"
+completion_text = "Removed piece of trash.
+"
 next_quests = Array[String](["talk_to_tatay"])
 metadata/_custom_type_script = "uid://bb3m8rauu0lss"

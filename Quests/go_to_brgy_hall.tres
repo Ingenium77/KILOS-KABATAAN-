@@ -6,7 +6,10 @@
 [resource]
 script = ExtResource("2_2pqpc")
 id = "go_to_brgy_hall"
-title = "Go to brgy hall"
-description = "Walk idk...	just go there"
-completion_text = "arrived at brgy hall"
+title = "Go to barangay hall"
+description = "Go to the barangay hall and see if Tatay is on the list.
+
+"
+completion_text = "Arrived at barangay hall.
+"
 metadata/_custom_type_script = "uid://bb3m8rauu0lss"

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dphnr54ci4564"
+path="res://.godot/imported/FIXER.dialogue-e6a0f8a14df6b9b81b682c1ef284aef8.tres"
+
+[deps]
+
+source_file="res://dialogue/FIXER.dialogue"
+dest_files=["res://.godot/imported/FIXER.dialogue-e6a0f8a14df6b9b81b682c1ef284aef8.tres"]
+
+[params]
+
+defaults=true

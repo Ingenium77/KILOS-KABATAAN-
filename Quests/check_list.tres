@@ -7,6 +7,8 @@
 script = ExtResource("1_0ycqd")
 id = "check_list"
 title = "Check the list"
-description = "Check Somerthing List"
-completion_text = "Go back to tatay now"
+description = "Inquire the staff about the list and see if Tatay's name is listed.
+
+"
+completion_text = "Go back to tatay now."
 metadata/_custom_type_script = "uid://bb3m8rauu0lss"

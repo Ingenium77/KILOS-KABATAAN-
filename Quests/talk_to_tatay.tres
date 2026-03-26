@@ -7,7 +7,7 @@
 script = ExtResource("1_x57fe")
 id = "talk_to_tatay"
 title = "Talk to Tatay"
-description = "See what he wants"
-completion_text = "Received tatay's request"
+description = "Talk to Tatay and see what he wants."
+completion_text = "Received tatay's request."
 next_quests = Array[String](["go_to_brgy_hall"])
 metadata/_custom_type_script = "uid://bb3m8rauu0lss"

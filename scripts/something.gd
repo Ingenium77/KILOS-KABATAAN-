@@ -14,4 +14,3 @@ func check_list_something() -> void:
 	await get_tree().create_timer(3.0).timeout
 	QuestManager.finish_quest("check_list",2)
 	QuestManager.start_quest("back_to_house")
-	

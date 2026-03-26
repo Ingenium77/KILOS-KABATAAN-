@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://cvru4dhclsrkb"]
+
+[ext_resource type="Texture2D" uid="uid://c2enuccv38ixc" path="res://HEL005 ARTS & DESIGN/NPC SCRAPS-Recovered-export.png" id="1_eto6n"]
+[ext_resource type="Script" uid="uid://csu3gxqqe5eai" path="res://scripts/characters/staff_npc.gd" id="1_h5cw7"]
+[ext_resource type="PackedScene" uid="uid://nfm3u8mtlswp" path="res://scenes/actionable.tscn" id="3_0cpis"]
+[ext_resource type="Resource" uid="uid://b5xt5dmi0nfj6" path="res://dialogue/BRGY HALL.dialogue" id="4_30cs2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dl8bw"]
+atlas = ExtResource("1_eto6n")
+region = Rect2(0, 0, 810, 888)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h5cw7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dl8bw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wdyay"]
+size = Vector2(23, 34)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_30cs2"]
+radius = 16.03122
+
+[node name="StaffNpc" type="StaticBody2D" unique_id=76690105]
+script = ExtResource("1_h5cw7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1339904954]
+position = Vector2(1.0000002, -6)
+scale = Vector2(0.039506175, 0.04054054)
+sprite_frames = SubResource("SpriteFrames_h5cw7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=32455651]
+position = Vector2(-1.5, -7)
+shape = SubResource("RectangleShape2D_wdyay")
+
+[node name="Actionable" parent="." unique_id=1160440308 instance=ExtResource("3_0cpis")]
+dialogue_resource = ExtResource("4_30cs2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable" unique_id=1478904182]
+position = Vector2(-1, -4)
+shape = SubResource("CircleShape2D_30cs2")
+
+[node name="Talk_label" type="Label" parent="." unique_id=32344826]
+modulate = Color(0, 0, 0, 1)
+texture_filter = 1
+offset_left = -53.0
+offset_top = -67.0
+offset_right = -21.0
+offset_bottom = -44.0
+scale = Vector2(3.2194717, 2.1366131)
+text = "Talk"
+
+[connection signal="area_entered" from="Actionable" to="." method="_on_actionable_area_entered"]
+[connection signal="area_exited" from="Actionable" to="." method="_on_actionable_area_exited"]
