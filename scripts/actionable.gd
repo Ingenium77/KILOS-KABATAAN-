@@ -16,40 +16,34 @@ func _validate_property(property: Dictionary) -> void:
 		if property.name in ["dialogue_resource", "dialogue_start"]:
 			property.usage = PROPERTY_USAGE_NO_EDITOR
 
-var is_acting: bool = false  # Prevent double triggers
+var dialogue_active: bool = false
 
 func action() -> void:
-	if is_acting:
+	if dialogue_active:
 		return
 	
-	is_acting = true
-	
-	# Show dialogue if enabled and available (before planting starts)
 	if use_dialogue and dialogue_resource:
 		start_dialogue()
 		return
 	
-	# No dialogue - do action immediately
 	do_parent_action()
 
-func no_action() -> void:
-	start_dialogue()
-
 func start_dialogue() -> void:
+	dialogue_active = true  # Lock only dialogue
 	var balloon = Balloon.instantiate()
 	balloon.add_to_group("dialogue_balloon")
 	get_tree().current_scene.add_child(balloon)
+	DialogueManager.dialogue_ended.connect(
+		func(_r): dialogue_active = false, 
+		CONNECT_ONE_SHOT
+	)
 	balloon.start(dialogue_resource, dialogue_start)
 
 func do_parent_action() -> void:
 	var parent = get_parent()
 	if not parent:
-		is_acting = false
 		return
 	
 	if parent.has_method("remove_something"):
 		parent.remove_something()
-		is_acting = false
-		return
 	
-	is_acting = false  # Reset if nothing happened
