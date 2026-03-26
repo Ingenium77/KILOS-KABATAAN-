@@ -1,28 +1,29 @@
-class_name Quest extends QuestManager
+class_name Quest
+extends Resource
 
-#start the quest
-func start_quest() -> void:
-	# make sure this quest is updated to start
-	if quest_status == QuestStatus.updated:
-		#update quest status
-		quest_status = QuestStatus.started
-		#update ui
-		QuestBox.visible = true
-		QuestTitle.text = quest_name
-		QuestDescription.text = quest_description
-		
-#mark quest as completed
-func completed() -> void:
-	if quest_status == QuestStatus.started:
-		#update quest status
-		quest_status = QuestStatus.reached_goal
-		#update uid
-		QuestDescription.text = reached_goal_text
-		
-# finish the quest
-func finish_quest() -> void:
-	if quest_status == QuestStatus.reached_goal:
-		#update quest status
-		quest_status = QuestStatus.finished
-		#update ui
-		QuestBox.visible = false
+enum Status { AVAILABLE, STARTED, REACHED_GOAL, FINISHED }
+
+@export var id: String
+@export var title: String
+@export_multiline var description: String
+@export_multiline var completion_text: String
+@export var objectives: Array[QuestObjective]
+@export var unlock_areas: Array[String] = []  # Multiple areas
+# Chain quest fields
+@export var prerequisite_quests: Array[String] 
+@export var next_quests: Array[String] 
+@export var is_main_quest: bool = true 
+
+var status: Status = Status.AVAILABLE
+
+func is_complete() -> bool:
+	for obj in objectives:
+		if not obj.is_complete():
+			return false
+	return true
+
+func get_objective(objective_id: String) -> QuestObjective:
+	for obj in objectives:
+		if obj.id == objective_id:
+			return obj
+	return null

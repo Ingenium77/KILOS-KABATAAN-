@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Quest" format=3 uid="uid://dtjcxf58f253c"]
+
+[ext_resource type="Script" uid="uid://cvbaoko12dgmk" path="res://scripts/quest_objective.gd" id="1_mpmiq"]
+[ext_resource type="Script" uid="uid://bb3m8rauu0lss" path="res://scripts/quest.gd" id="2_2pqpc"]
+
+[resource]
+script = ExtResource("2_2pqpc")
+id = "go_to_brgy_hall"
+title = "Go to brgy hall"
+description = "Walk idk...	just go there"
+completion_text = "arrived at brgy hall"
+metadata/_custom_type_script = "uid://bb3m8rauu0lss"

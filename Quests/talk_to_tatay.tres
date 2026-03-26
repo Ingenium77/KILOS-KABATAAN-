@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Quest" format=3 uid="uid://ce4j860kf7gxd"]
+
+[ext_resource type="Script" uid="uid://bb3m8rauu0lss" path="res://scripts/quest.gd" id="1_x57fe"]
+[ext_resource type="Script" uid="uid://cvbaoko12dgmk" path="res://scripts/quest_objective.gd" id="1_ytvxb"]
+
+[resource]
+script = ExtResource("1_x57fe")
+id = "talk_to_tatay"
+title = "Talk to Tatay"
+description = "See what he wants"
+completion_text = "Received tatay's request"
+next_quests = Array[String](["go_to_brgy_hall"])
+metadata/_custom_type_script = "uid://bb3m8rauu0lss"
