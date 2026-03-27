@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cp6231i4o2lw7"]
 
 [ext_resource type="Texture2D" uid="uid://cfkcyy3aswe1l" path="res://HEL005 ARTS & DESIGN/Screenshot (1641).png" id="1_p3f41"]
-[ext_resource type="Script" uid="uid://v7ejji5pq6vg" path="res://scenes/Locations/brgy_hall.gd" id="1_qcv0j"]
+[ext_resource type="Script" uid="uid://v7ejji5pq6vg" path="res://scripts/locations/brgy_hall.gd" id="1_qcv0j"]
 [ext_resource type="PackedScene" uid="uid://bebvew7s54opu" path="res://scenes/Characters/player_character.tscn" id="2_qcv0j"]
 [ext_resource type="PackedScene" uid="uid://duu3tbfqdk6u4" path="res://scenes/passage_trigger.tscn" id="5_q3e40"]
 [ext_resource type="PackedScene" uid="uid://cvru4dhclsrkb" path="res://scenes/Characters/staff_npc.tscn" id="5_y4ukx"]
