@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://cojij8x2dofhs"]
+
+[ext_resource type="Script" uid="uid://ct2ps7umxdn35" path="res://scripts/locations/house.gd" id="1_7eohg"]
+[ext_resource type="Texture2D" uid="uid://cfkcyy3aswe1l" path="res://HEL005 ARTS & DESIGN/Screenshot (1641).png" id="2_epno4"]
+[ext_resource type="PackedScene" uid="uid://bebvew7s54opu" path="res://scenes/Characters/player_character.tscn" id="3_2yyrm"]
+[ext_resource type="PackedScene" uid="uid://bafd1icvrupct" path="res://scenes/Characters/tatay_npc.tscn" id="4_4c1g4"]
+[ext_resource type="PackedScene" uid="uid://duu3tbfqdk6u4" path="res://scenes/passage_trigger.tscn" id="8_36t42"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5av4d"]
+size = Vector2(908, 307)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6bchc"]
+size = Vector2(1092, 102)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kr2gd"]
+size = Vector2(45, 524)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o5oo1"]
+size = Vector2(285, 109)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_10cbx"]
+size = Vector2(102.5, 191)
+
+[node name="HOUSE" type="Node2D" unique_id=94483326]
+script = ExtResource("1_7eohg")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1770068772]
+offset_left = -470.0
+offset_top = -326.0
+offset_right = 625.0
+offset_bottom = 283.0
+texture = ExtResource("2_epno4")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1185921827]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=494560123]
+position = Vector2(170, -172.5)
+shape = SubResource("RectangleShape2D_5av4d")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1001188119]
+position = Vector2(80, 233)
+shape = SubResource("RectangleShape2D_6bchc")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1547977090]
+position = Vector2(-447.5, -68)
+shape = SubResource("RectangleShape2D_kr2gd")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=917958161]
+position = Vector2(-319, -382)
+shape = SubResource("RectangleShape2D_o5oo1")
+
+[node name="Mateo" parent="." unique_id=1075552158 instance=ExtResource("3_2yyrm")]
+position = Vector2(-373, -306)
+
+[node name="TATAY NPC" parent="." unique_id=1838898784 instance=ExtResource("4_4c1g4")]
+position = Vector2(446, 92)
+
+[node name="Label" type="Label" parent="." unique_id=1492475452]
+offset_left = -28.0
+offset_top = -95.0
+offset_right = 118.0
+offset_bottom = -36.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 43
+text = "HOUSE"
+
+[node name="PassageTrigger" parent="." unique_id=968975390 instance=ExtResource("8_36t42")]
+required_done_quests = Array[String](["talk_to_tatay", "remove_something"])
+require_all_quests = true
+target_scene = "res://scenes/Locations/main_map.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PassageTrigger" unique_id=1597020504]
+position = Vector2(573.25, 82)
+shape = SubResource("RectangleShape2D_10cbx")

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Quest" format=3 uid="uid://c4o73whsn7qim"]
+
+[ext_resource type="Script" uid="uid://cvbaoko12dgmk" path="res://scripts/quest_objective.gd" id="1_fgosg"]
+[ext_resource type="Script" uid="uid://bb3m8rauu0lss" path="res://scripts/quest.gd" id="2_x61m1"]
+
+[resource]
+script = ExtResource("2_x61m1")
+id = "remove_something"
+title = "Remove Something"
+description = "There's a piece of trash on the yard, remove it.
+"
+completion_text = "Removed piece of trash.
+"
+next_quests = Array[String](["talk_to_tatay"])
+metadata/_custom_type_script = "uid://bb3m8rauu0lss"

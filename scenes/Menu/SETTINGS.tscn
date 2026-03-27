@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cxwfdqv4h0xs2"]
+
+[ext_resource type="Script" uid="uid://c1df4o2ccxo0x" path="res://scripts/menu/settings.gd" id="1_hnny8"]
+[ext_resource type="Texture2D" uid="uid://bf2qn0j4t07w8" path="res://HEL005 ARTS & DESIGN/SETTINGS 2.png" id="2_5d72u"]
+
+[node name="Settings" type="Control" unique_id=789437637]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hnny8")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1161096852]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_5d72u")
+
+[node name="Settings-MainMenu" type="Button" parent="." unique_id=782363706]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 1025.0
+offset_top = 3.0
+offset_right = 1147.0
+offset_bottom = 102.0
+
+[connection signal="pressed" from="Settings-MainMenu" to="." method="_on_settings_main_menu_pressed"]

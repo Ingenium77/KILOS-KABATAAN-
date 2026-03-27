@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://b5xt5dmi0nfj6"
+path="res://.godot/imported/BRGY HALL.dialogue-8dd17a8e707990b6675a8c9979f7986c.tres"
+
+[deps]
+
+source_file="res://dialogue/BRGY HALL.dialogue"
+dest_files=["res://.godot/imported/BRGY HALL.dialogue-8dd17a8e707990b6675a8c9979f7986c.tres"]
+
+[params]
+
+defaults=true

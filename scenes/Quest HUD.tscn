@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://db1hcoyyy26a5"]
+
+[ext_resource type="Script" uid="uid://cj5oq1n8ge1tn" path="res://scripts/quest_hud.gd" id="1_4qhah"]
+[ext_resource type="Texture2D" uid="uid://cxwws7t6tefln" path="res://HEL005 ARTS & DESIGN/quest box.png" id="1_odtxr"]
+
+[node name="QuestHUD" type="CanvasLayer" unique_id=1899302341]
+script = ExtResource("1_4qhah")
+
+[node name="QuestBox" type="NinePatchRect" parent="." unique_id=1933099300]
+offset_left = 17.0
+offset_top = 14.0
+offset_right = 210.0
+offset_bottom = 125.0
+texture = ExtResource("1_odtxr")
+region_rect = Rect2(58.970245, 46.682034, 256.23737, 98.50128)
+
+[node name="QuestTitle" type="RichTextLabel" parent="QuestBox" unique_id=1310667594]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 15.0
+offset_right = 176.0
+offset_bottom = 38.0
+text = "Quest Title"
+fit_content = true
+scroll_active = false
+
+[node name="QuestDescription" type="RichTextLabel" parent="QuestBox" unique_id=2022346099]
+modulate = Color(0.9137255, 0.7254902, 0.18431373, 1)
+layout_mode = 0
+offset_left = 13.0
+offset_top = 42.0
+offset_right = 178.0
+offset_bottom = 65.0
+text = "Quest Description"
+fit_content = true
+scroll_active = false

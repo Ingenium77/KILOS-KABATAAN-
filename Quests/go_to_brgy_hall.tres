@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Quest" format=3 uid="uid://dtjcxf58f253c"]
+
+[ext_resource type="Script" uid="uid://bb3m8rauu0lss" path="res://scripts/quest.gd" id="2_2pqpc"]
+
+[resource]
+script = ExtResource("2_2pqpc")
+id = "go_to_brgy_hall"
+title = "Go to barangay hall"
+description = "Go to the barangay hall and see if Tatay is on the list.
+
+"
+completion_text = "Arrived at barangay hall.
+"
+next_quests = Array[String](["check_list"])
+metadata/_custom_type_script = "uid://bb3m8rauu0lss"
