@@ -65,7 +65,7 @@ theme_override_font_sizes/font_size = 43
 text = "HOUSE"
 
 [node name="PassageTrigger" parent="." unique_id=968975390 instance=ExtResource("8_36t42")]
-required_done_quests = Array[String](["talk_to_tatay"])
+required_done_quests = Array[String](["talk_to_tatay", "remove_something"])
 require_all_quests = true
 target_scene = "res://scenes/Locations/main_map.tscn"
 
