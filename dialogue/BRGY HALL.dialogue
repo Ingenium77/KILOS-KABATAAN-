@@ -14,6 +14,8 @@ if not QuestManager.is_quest_completed()
 			Republic Act No. 9485 (Anti-Red Tape Act): This law requires government offices to provide services efficiently and transparently. In the game, filing a complaint ensures your concern is officially recorded, highlighting that you are using proper channels instead of letting corruption decide.
 			Republic Act No. 6713 (Code of Conduct and Ethical Standards for Public Officials): Public officials must act with integrity and fairness. By filing a complaint, Mateo is holding the staff accountable and reinforcing ethical behavior in the system.
 			do QuestHud.show()
+			do QuestManager.start_quest("filed_a_complaint")
+			do QuestManager.finish_quest("filed_a_complaint")
 			do QuestManager.finish_quest("check_list")
 			do QuestManager.start_quest("back_to_house")
 		- Don't sign the complaint form and find another way for the aid to come faster.
