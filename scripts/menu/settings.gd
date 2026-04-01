@@ -12,4 +12,4 @@ func _process(delta: float) -> void:
 
 
 func _on_settings_main_menu_pressed() -> void:
-	SceneLoader.load_scene("res://scenes/MAIN MENU.tscn")
+	SceneLoader.load_scene("res://scenes/Menu/MAIN MENU.tscn")

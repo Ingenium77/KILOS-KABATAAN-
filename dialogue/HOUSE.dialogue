@@ -1,19 +1,40 @@
 ~ start
-<<<<<<< Updated upstream
-if QuestManager.is_quest_completed("back_to_house")
-	Tatay: Well is my name there?
-	=> END
-=======
->>>>>>> Stashed changes
-
-elif QuestManager.is_quest_completed("talk_to_tatay") and not QuestManager.is_quest_completed("back_to_house")
-	Well wjat are you waiting for
+if QuestManager.is_quest_completed("filed_a_complaint") and QuestManager.is_quest_completed("back_to_house")
+	Tatay: How did it go? What’s the news?
+	Mateo: I asked why you weren’t on the list and filed a complaint. Though, it will take time to process. Our aid might not arrive early, especially when we need it.
+	Tatay: I’m proud of you, Mateo. Doing what’s right is not always easy.
+	Mateo: I just hope it still helps, Tay.
+	Tatay: Even if it doesn’t, we’ve at least tried to be fair.
+	EPISODE COMPLETE: ACHIEVED MORAL VICTORY ENDING
+	EPISODE COMPLETE: Mateo's father is proud of his son for upholding what's right despite their situation.
 	=> END
 	
-		
-elif not QuestManager.is_quest_completed("remove_something")
-	remove that thing first!
+elif QuestManager.is_quest_completed("pay_the_fixer") and QuestManager.is_quest_completed("back_to_house")
+	Tatay: Did it go well? Was my name on the list?
+	Mateo: Yes, but we had to pay someone to get your name on the list...
+	Tatay: I see, that wasn’t easy.
+	Mateo: At least we got the aid...
+	Tatay: True, but I hope next time we can deal with everything fairly.
+	EPISODE COMPLETE: ACHIEVED CORRUPT ENDING 
+	EPISODE COMPLETE: Mateo's father is relieved, but feels morally uneasy.
 	=> END
+	
+elif QuestManager.is_quest_completed("dont_pay_the_fixer") and QuestManager.is_quest_completed("back_to_house")
+	Tatay: Did you check the list?
+	Mateo: Yes. You weren’t on the list, but I didn’t file a complaint.
+	Mateo: After that, a stranger told me that they could get your name on the list if I pay them. But I didn't because it's wrong.
+	Mateo: They also said that the aid might take a long time to come, maybe never too. I'm so sorry Tay...
+	Tatay: Don't worry about it, son. We’ll just have to work harder.
+	Mateo: I hope things will improve next time...
+	Tatay: We'll get through this Mateo. You and me, together.
+	EPISODE COMPLETE: ACHIEVED MORALITY, BUT AT WHAT COST? ENDING
+	EPISODE COMPLETE: Mateo's father is proud of his son for doing what's right, but also worries about the challenges they're about to face.
+	=> END
+
+if QuestManager.is_quest_completed("talk_to_tatay") and not QuestManager.is_quest_completed("back_to_house")
+	Tatay: I'll be waiting for you here, son.
+	=> END
+	
 	
 else
 	Tatay: Mateo, go to the barangay hall. The list of farmers who will receive aid is being posted today.
@@ -47,46 +68,11 @@ do QuestManager.finish_quest("talk_to_tatay", 1)
 => END
 
 ~ locked
-if not QuestManager.is_quest_completed("remove_something")
-	Tatay: You haven't removed that thing yet!
-	=> END
-elif not QuestManager.is_quest_completed("talk_to_tatay")
-	NPC: You need to talk to Tatay first!
+if not QuestManager.is_quest_completed("talk_to_tatay")
+	Game Notification: You need to talk to Tatay first!
 	=> END
 else
 	# All done - shouldn't reach here, but just in case
 	=> END
 => END
 
-if QuestManager.is_quest_completed("check_list") and QuestManager.is_quest_completed("filed_a_complaint")
-	Tatay: How did it go? What’s the news?
-	Mateo: I asked why you weren’t on the list and filed a complaint. Though, it will take time to process. Our aid might not arrive early, especially when we need it.
-	Tatay: I’m proud of you, Mateo. Doing what’s right is not always easy.
-	Mateo: I just hope it still helps, Tay.
-	Tatay: Even if it doesn’t, we’ve at least tried to be fair.
-	EPISODE COMPLETE: ACHIEVED MORAL VICTORY ENDING.
-	EPISODE COMPLETE: Mateo's father is proud of his son for upholding what's right despite their situation.
-	=> END
-
-if  QuestManager.is_quest_completed("pay_the_fixer")
-	Tatay: Did it go well? Was my name on the list?
-	Mateo: Yes, but we had to pay someone to get your name on the list...
-	Tatay: I see, that wasn’t easy.
-	Mateo: At least we got the aid...
-	Tatay: True, but I hope next time we can deal with everything fairly.
-	EPISODE COMPLETE: ACHIEVED CORRUPT PATH ENDING. 
-	EPISODE COMPLETE: Mateo's father is relieved, but feels morally uneasy.
-	=> END
-
-if QuestManager.is_quest_completed("dont_pay_the_fixer")
-	Tatay: Did you check the list?
-	Mateo: Yes. You weren’t on the list, but I didn’t file a complaint.
-	Mateo: A stranger told me that they can get us on the list. But I didn't go through with it because it's wrong.
-	Mateo: They also told me that the aid will come late, maybe never. I'm so sorry Tay...
-	Tatay: Don't worry about it son, we'll just have to work harder.
-	Mateo: I hope everything will go better next time.
-	Tatay: We’ll manage, Mateo. You and me, together.
-	EPISODE COMPLETE: ACHIEVED INACTION PATH ENDING.
-	EPISODE COMPLETE: Mateo and his father decided to cope without aid.
-	=> END
-	

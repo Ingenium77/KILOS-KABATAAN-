@@ -1,19 +1,19 @@
 [gd_scene format=3 uid="uid://bafd1icvrupct"]
 
 [ext_resource type="Script" uid="uid://dxxhui6b5unge" path="res://scripts/characters/tatay_npc.gd" id="1_1bf3r"]
-[ext_resource type="Texture2D" uid="uid://ba5t0j1xcguue" path="res://HEL005 ARTS & DESIGN/TATAY NPC export.png" id="2_3rukx"]
+[ext_resource type="Texture2D" uid="uid://rvissktujvvn" path="res://HEL005 ARTS & DESIGN/TATAY NPC export-export.png" id="2_pujqw"]
 [ext_resource type="PackedScene" uid="uid://nfm3u8mtlswp" path="res://scenes/actionable.tscn" id="3_3rukx"]
 [ext_resource type="Resource" uid="uid://b4k2wlensv3x3" path="res://dialogue/HOUSE.dialogue" id="4_5j8qp"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5j8qp"]
-atlas = ExtResource("2_3rukx")
-region = Rect2(111, 74, 37, 37)
+[sub_resource type="AtlasTexture" id="AtlasTexture_qewck"]
+atlas = ExtResource("2_pujqw")
+region = Rect2(0, 37, 37, 37)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_56g0b"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5j8qp")
+"texture": SubResource("AtlasTexture_qewck")
 }],
 "loop": true,
 "name": &"default",
@@ -21,28 +21,28 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bf3r"]
-size = Vector2(20, 33)
+size = Vector2(25, 40)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5j8qp"]
-radius = 17.029387
+radius = 20.024984
 
 [node name="TATAY NPC" type="StaticBody2D" unique_id=1838898784]
 script = ExtResource("1_1bf3r")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=737073783]
-position = Vector2(6.999999, -4.999999)
-scale = Vector2(1.2567568, 1.2567568)
+position = Vector2(-6.5000024, -7.374998)
+scale = Vector2(1.5405405, 1.4932433)
 sprite_frames = SubResource("SpriteFrames_56g0b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1775711957]
-position = Vector2(-1, 0.5)
+position = Vector2(0.5, -3)
 shape = SubResource("RectangleShape2D_1bf3r")
 
 [node name="Actionable" parent="." unique_id=1160440308 instance=ExtResource("3_3rukx")]
 dialogue_resource = ExtResource("4_5j8qp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable" unique_id=1367206564]
-position = Vector2(0, 2)
+position = Vector2(0, 3)
 shape = SubResource("CircleShape2D_5j8qp")
 
 [node name="Talk_label" type="Label" parent="." unique_id=873172634]

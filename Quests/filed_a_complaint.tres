@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Quest" format=3 uid="uid://pany3u1i7yk2"]
+
+[ext_resource type="Script" uid="uid://bb3m8rauu0lss" path="res://scripts/quest.gd" id="1_udnsd"]
+
+[resource]
+script = ExtResource("1_udnsd")
+id = "filed_a_complaint"
+title = "File a complaint"
+description = "File a complaint and submit it to the staff."
+completion_text = "You've filed and submitted a complaint."
+metadata/_custom_type_script = "uid://bb3m8rauu0lss"

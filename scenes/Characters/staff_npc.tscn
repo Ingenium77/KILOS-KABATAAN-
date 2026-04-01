@@ -21,38 +21,38 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wdyay"]
-size = Vector2(23, 34)
+size = Vector2(27, 39)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_30cs2"]
-radius = 16.03122
+radius = 20.0
 
 [node name="StaffNpc" type="StaticBody2D" unique_id=76690105]
 script = ExtResource("1_h5cw7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1339904954]
-position = Vector2(1.0000002, -6)
-scale = Vector2(0.039506175, 0.04054054)
+position = Vector2(2.499999, -3.4999993)
+scale = Vector2(0.04567901, 0.046171173)
 sprite_frames = SubResource("SpriteFrames_h5cw7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=32455651]
-position = Vector2(-1.5, -7)
+position = Vector2(-0.5, -4.5)
 shape = SubResource("RectangleShape2D_wdyay")
 
 [node name="Actionable" parent="." unique_id=1160440308 instance=ExtResource("3_0cpis")]
 dialogue_resource = ExtResource("4_30cs2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable" unique_id=1478904182]
-position = Vector2(-1, -4)
+position = Vector2(-1, 0)
 shape = SubResource("CircleShape2D_30cs2")
 
 [node name="Talk_label" type="Label" parent="." unique_id=32344826]
 modulate = Color(0, 0, 0, 1)
 texture_filter = 1
-offset_left = -53.0
-offset_top = -67.0
-offset_right = -21.0
-offset_bottom = -44.0
-scale = Vector2(3.2194717, 2.1366131)
+offset_left = -16.000002
+offset_top = -43.0
+offset_right = 15.999998
+offset_bottom = -20.0
+scale = Vector2(0.93947166, 0.7712889)
 text = "Talk"
 
 [connection signal="area_entered" from="Actionable" to="." method="_on_actionable_area_entered"]

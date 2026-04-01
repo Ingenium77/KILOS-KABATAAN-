@@ -7,3 +7,6 @@ func _ready() -> void:
 	QuestManager.finish_quest("go_to_brgy_hall")
 	QuestManager.start_quest("check_list")
 	
+func _on_settings_pressed() -> void:
+	SceneLoader.load_scene("res://scenes/Menu/SETTINGS.tscn")
+	

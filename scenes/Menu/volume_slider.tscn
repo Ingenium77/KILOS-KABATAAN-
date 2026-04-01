@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://b08kafg2m4dqi"]
+
+[ext_resource type="Script" uid="uid://dvbvoonvyr5ia" path="res://scripts/menu/volume_slider.gd" id="1_eiy7h"]
+
+[node name="VolumeSlider" type="HSlider" unique_id=1035320163]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 1.0
+step = 0.001
+script = ExtResource("1_eiy7h")

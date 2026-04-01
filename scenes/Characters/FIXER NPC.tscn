@@ -1,19 +1,19 @@
 [gd_scene format=3 uid="uid://c22ftj6edm2s3"]
 
 [ext_resource type="Script" uid="uid://66icfhn8mmjj" path="res://scripts/characters/fixer_npc.gd" id="1_wfe65"]
-[ext_resource type="Texture2D" uid="uid://ba51kn3j03li6" path="res://HEL005 ARTS & DESIGN/FIXER NPC.png" id="2_a3hpm"]
+[ext_resource type="Texture2D" uid="uid://cpqqny6iejpbo" path="res://HEL005 ARTS & DESIGN/FIXER NPC-export-export.png" id="2_wfe65"]
 [ext_resource type="PackedScene" uid="uid://nfm3u8mtlswp" path="res://scenes/actionable.tscn" id="3_402ww"]
 [ext_resource type="Resource" uid="uid://dphnr54ci4564" path="res://dialogue/FIXER.dialogue" id="4_tvoda"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nr3m2"]
-atlas = ExtResource("2_a3hpm")
-region = Rect2(0, 0, 37, 37)
+[sub_resource type="AtlasTexture" id="AtlasTexture_a3hpm"]
+atlas = ExtResource("2_wfe65")
+region = Rect2(111, 74, 37, 37)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5xfuv"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_nr3m2")
+"texture": SubResource("AtlasTexture_a3hpm")
 }],
 "loop": true,
 "name": &"default",
@@ -21,21 +21,21 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_afcsl"]
-size = Vector2(18.760567, 26.356167)
+size = Vector2(22.92958, 31.42466)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m6gb1"]
-radius = 12.0
+radius = 15.0
 
 [node name="FixerNpc" type="StaticBody2D" unique_id=1973717582]
 script = ExtResource("1_wfe65")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1737675230]
-position = Vector2(-0.75, -0.25)
-scale = Vector2(0.9594594, 0.9864865)
+position = Vector2(9.499999, -2.5624986)
+scale = Vector2(1.3243243, 1.1655405)
 sprite_frames = SubResource("SpriteFrames_5xfuv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1942302663]
-position = Vector2(2.9999998, 0.9999994)
+position = Vector2(1.0000002, 2.5000002)
 scale = Vector2(0.9594594, 0.9864865)
 shape = SubResource("RectangleShape2D_afcsl")
 
@@ -44,15 +44,15 @@ dialogue_resource = ExtResource("4_tvoda")
 dialogue_start = "locked"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable" unique_id=1933662607]
-position = Vector2(3, 4)
+position = Vector2(1, 7)
 shape = SubResource("CircleShape2D_m6gb1")
 
 [node name="Talk_label" type="Label" parent="." unique_id=1771171716]
 modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
-offset_left = -11.0
-offset_top = -28.0
-offset_right = 21.0
-offset_bottom = -5.0
+offset_left = -10.0
+offset_top = -27.0
+offset_right = 22.0
+offset_bottom = -4.0
 scale = Vector2(0.8, 0.6400006)
 text = "Talk"
 

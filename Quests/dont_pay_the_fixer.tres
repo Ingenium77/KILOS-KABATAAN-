@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Quest" format=3 uid="uid://516q41a2f8pw"]
+
+[ext_resource type="Script" uid="uid://bb3m8rauu0lss" path="res://scripts/quest.gd" id="1_q6k8j"]
+
+[resource]
+script = ExtResource("1_q6k8j")
+id = "dont_pay_the_fixer"
+title = "Pay or don't pay the fixer"
+description = "Decide on whether to accept or reject the fixer's offer."
+completion_text = "You've rejected the fixer's offer."
+metadata/_custom_type_script = "uid://bb3m8rauu0lss"

@@ -1,6 +1,5 @@
 [gd_resource type="Resource" script_class="Quest" format=3 uid="uid://c5yr6bpwikc4c"]
 
-[ext_resource type="Script" uid="uid://cvbaoko12dgmk" path="res://scripts/quest_objective.gd" id="1_kuwbp"]
 [ext_resource type="Script" uid="uid://bb3m8rauu0lss" path="res://scripts/quest.gd" id="2_6w1dp"]
 
 [resource]

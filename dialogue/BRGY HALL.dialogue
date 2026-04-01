@@ -1,7 +1,11 @@
 ~ start
 if not QuestManager.is_quest_completed()
 	Staff: Next! What do you need?
+	Mateo: Is there someone with the surname Santos on the list of farmers who will be receiving aid?
+	Staff: Hold on sir, let me check...
+	Staff: I'm afraid not, sir.
 	- Why isn’t my father’s name on the list?
+		Mateo: Why isn't my father's name on the list?
 		Staff: If it’s not on the list, it’s not on the list.
 		Mateo: But we applied for the aid.
 		Staff: If you have a complaint, file a report.

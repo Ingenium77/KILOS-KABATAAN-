@@ -17,13 +17,10 @@ func update_buttons():
 	brgy_hall.disabled = true
 	brgy_hall.modulate = Color.GRAY  # Locked appearance
 	
-	if QuestManager.is_quest_completed("remove_something"):
+	if QuestManager.is_quest_completed("talk_to_tatay"):
 			brgy_hall.disabled = false
 			brgy_hall.text = ""
 			brgy_hall.modulate = Color.WHITE
-
-func _on_home_pressed() -> void:
-	SceneLoader.load_scene("res://scenes/Menu/MAIN MENU.tscn")
 
 func _on_settings_pressed() -> void:
 	SceneLoader.load_scene("res://scenes/Menu/SETTINGS.tscn")

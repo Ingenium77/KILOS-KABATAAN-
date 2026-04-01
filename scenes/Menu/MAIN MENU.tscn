@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cgsuwgke5iefr"]
 
 [ext_resource type="Script" uid="uid://dpdpn8xxun4f1" path="res://scripts/menu/main_menu.gd" id="1_djk0m"]
-[ext_resource type="Texture2D" uid="uid://b5td3rg5w1yxv" path="res://HEL005 ARTS & DESIGN/MAIN MENU.png" id="2_eg8pg"]
+[ext_resource type="Texture2D" uid="uid://bbh65syd87he0" path="res://HEL005 ARTS & DESIGN/MAIN MENU FINAL-export.png" id="2_wulhn"]
 
 [node name="MainMenu" type="Control" unique_id=187314477 node_paths=PackedStringArray("play_button")]
 layout_mode = 3
@@ -21,7 +21,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_eg8pg")
+texture = ExtResource("2_wulhn")
 
 [node name="Settings" type="Button" parent="." unique_id=1748238660]
 show_behind_parent = true
@@ -41,10 +41,10 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 52.0
-offset_top = -172.0
-offset_right = 542.0
-offset_bottom = -37.0
+offset_left = 72.0
+offset_top = -307.0
+offset_right = 524.0
+offset_bottom = -135.0
 grow_vertical = 0
 
 [node name="Credits" type="Button" parent="." unique_id=603803091]
@@ -55,10 +55,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -525.0
-offset_top = -178.0
-offset_right = -40.0
-offset_bottom = -40.0
+offset_left = -555.0
+offset_top = -303.0
+offset_right = -102.0
+offset_bottom = -136.0
 grow_horizontal = 0
 grow_vertical = 0
 

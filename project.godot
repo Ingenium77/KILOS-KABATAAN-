@@ -15,12 +15,17 @@ run/main_scene="uid://cgsuwgke5iefr"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://tee686p12x1j"
+
 [autoload]
 
 DialogueManager="*uid://c3rodes2l3gxb"
 SceneLoader="*uid://c81wg5hsl8i14"
 QuestHud="*uid://db1hcoyyy26a5"
 QuestManager="*uid://c4h7uaa7vxpcx"
+BackgroundMusic="*uid://0p6t5yh0as66"
 
 [dialogue_manager]
 
