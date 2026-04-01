@@ -124,7 +124,7 @@ func start(with_dialogue_resource: DialogueResource = null, title: String = "", 
 ## Apply any changes to the balloon given a new [DialogueLine].
 func apply_dialogue_line() -> void:
 	mutation_cooldown.stop()
-
+	
 	progress.hide()
 	is_waiting_for_input = false
 	balloon.focus_mode = Control.FOCUS_ALL
@@ -142,7 +142,9 @@ func apply_dialogue_line() -> void:
 	# Show our balloon
 	balloon.show()
 	will_hide_balloon = false
-
+	
+	audio_stream_player.play()
+	
 	dialogue_label.show()
 	if not dialogue_line.text.is_empty():
 		dialogue_label.type_out()
@@ -165,7 +167,6 @@ func apply_dialogue_line() -> void:
 		is_waiting_for_input = true
 		balloon.focus_mode = Control.FOCUS_ALL
 		balloon.grab_focus()
-
 
 ## Go to the next line
 func next(next_id: String) -> void:

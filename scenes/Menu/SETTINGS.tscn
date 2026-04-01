@@ -3,8 +3,6 @@
 [ext_resource type="Script" uid="uid://c1df4o2ccxo0x" path="res://scripts/menu/settings.gd" id="1_hnny8"]
 [ext_resource type="Texture2D" uid="uid://7v7l5ptr6jy2" path="res://HEL005 ARTS & DESIGN/SETTINGS 2-export.png" id="2_08m3s"]
 [ext_resource type="PackedScene" uid="uid://b08kafg2m4dqi" path="res://scenes/Menu/volume_slider.tscn" id="3_bqfv0"]
-[ext_resource type="AudioStream" uid="uid://0p6t5yh0as66" path="res://sounds/Background Music 4.wav" id="4_e37ll"]
-[ext_resource type="AudioStream" uid="uid://cianew04epvx2" path="res://sounds/Dialogue Sound Effect.MP3" id="5_qx5ki"]
 
 [node name="Settings" type="Control" unique_id=789437637]
 layout_mode = 3
@@ -24,7 +22,18 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_08m3s")
 
-[node name="Main Volume" parent="TextureRect" unique_id=1035320163 instance=ExtResource("3_bqfv0")]
+[node name="bgm_slider" parent="TextureRect" unique_id=525759805 instance=ExtResource("3_bqfv0")]
+modulate = Color(1, 1, 0, 1)
+layout_mode = 1
+offset_left = 78.0
+offset_top = 301.0
+offset_right = -630.0
+offset_bottom = -221.0
+tick_count = 10
+ticks_on_borders = true
+bus_name = "bgm"
+
+[node name="sfx_slider" parent="TextureRect" unique_id=1035320163 instance=ExtResource("3_bqfv0")]
 modulate = Color(1, 0.972549, 0, 1)
 layout_mode = 1
 offset_left = 79.0
@@ -34,20 +43,9 @@ offset_bottom = -61.65149
 scale = Vector2(0.9786284, 1.0695748)
 tick_count = 10
 ticks_on_borders = true
-bus_name = "music"
+bus_name = "dialogue"
 
-[node name="VolumeSlider" parent="TextureRect" unique_id=525759805 instance=ExtResource("3_bqfv0")]
-modulate = Color(1, 1, 0, 1)
-layout_mode = 1
-offset_left = 78.0
-offset_top = 301.0
-offset_right = -630.0
-offset_bottom = -221.0
-tick_count = 10
-ticks_on_borders = true
-bus_name = "sfx"
-
-[node name="Settings-MainMenu" type="Button" parent="." unique_id=782363706]
+[node name="Settings-Exit" type="Button" parent="." unique_id=782363706]
 show_behind_parent = true
 layout_mode = 0
 offset_left = 1025.0
@@ -55,12 +53,4 @@ offset_top = 3.0
 offset_right = 1147.0
 offset_bottom = 102.0
 
-[node name="BackgroundMusic4" type="AudioStreamPlayer" parent="." unique_id=1231946088]
-stream = ExtResource("4_e37ll")
-bus = &"music"
-
-[node name="DialogueSoundEffect" type="AudioStreamPlayer" parent="." unique_id=827511705]
-stream = ExtResource("5_qx5ki")
-bus = &"sfx"
-
-[connection signal="pressed" from="Settings-MainMenu" to="." method="_on_settings_main_menu_pressed"]
+[connection signal="pressed" from="Settings-Exit" to="." method="_on_settings_exit_pressed"]
