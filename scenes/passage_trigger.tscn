@@ -5,7 +5,6 @@
 
 [node name="PassageTrigger" type="Area2D" unique_id=968975390]
 script = ExtResource("1_3agwg")
-required_quests = Array[String](["check_list", "talk_to_fixer"])
 require_all_quests = false
 dialogue_resource = ExtResource("2_vc04n")
 
