@@ -2,13 +2,12 @@
 
 [ext_resource type="Script" uid="uid://ts70a0nessa" path="res://scripts/locations/main_map.gd" id="1_ymvy1"]
 [ext_resource type="Texture2D" uid="uid://dybgb7bb6kf11" path="res://HEL005 ARTS & DESIGN/FINAL final MAP.png" id="2_4vsr0"]
+[ext_resource type="Resource" uid="uid://dtgy4i48y30ev" path="res://dialogue/MAP.dialogue" id="2_smdj0"]
 [ext_resource type="Texture2D" uid="uid://cti8paidv62h3" path="res://HEL005 ARTS & DESIGN/SETTINGS ICON.png" id="3_smdj0"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dtyh5"]
-bg_color = Color(0, 0, 0, 0.8666667)
 
 [node name="MainMap2" type="Node2D" unique_id=704006628]
 script = ExtResource("1_ymvy1")
+dialogue_resource = ExtResource("2_smdj0")
 
 [node name="Map" type="TextureRect" parent="." unique_id=1205524218]
 offset_right = 1154.0
@@ -35,21 +34,20 @@ offset_right = 1148.0
 offset_bottom = 91.0
 
 [node name="House" type="Button" parent="." unique_id=1421463379]
+modulate = Color(1, 1, 1, 0.14901961)
 offset_left = 238.0
 offset_top = 46.0
 offset_right = 883.0
 offset_bottom = 223.0
 
 [node name="Brgy Hall" type="Button" parent="." unique_id=1521734405]
+modulate = Color(1, 1, 1, 0.14901961)
 offset_left = 419.0
 offset_top = 312.0
 offset_right = 854.0
 offset_bottom = 463.0
 theme_override_colors/font_disabled_color = Color(1, 0.30980393, 0.20784314, 1)
 theme_override_font_sizes/font_size = 32
-theme_override_styles/disabled = SubResource("StyleBoxFlat_dtyh5")
-disabled = true
-text = "LOCKED"
 
 [connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="House" to="." method="_on_house_pressed"]

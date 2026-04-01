@@ -1,26 +1,10 @@
 extends Node2D
 
 @onready var brgy_hall: Button = $"Brgy Hall"
+const Balloon = preload("res://dialogue/Balloon/balloon.tscn")
 
-func _ready():
-	# Check if already unlocked (in case we return to this scene)
-	update_buttons()
-
-func _on_area_unlocked(area_id: String):
-	if area_id == "brgy_hall":
-		brgy_hall.disabled = false
-		brgy_hall.modulate = Color.WHITE  # Normal color
-		print("Barangay Hall unlocked!")
-
-func update_buttons():
-	# Check if brgy_hall should be unlocked
-	brgy_hall.disabled = true
-	brgy_hall.modulate = Color.GRAY  # Locked appearance
-	
-	if QuestManager.is_quest_completed("talk_to_tatay"):
-			brgy_hall.disabled = false
-			brgy_hall.text = ""
-			brgy_hall.modulate = Color.WHITE
+@export var dialogue_resource: DialogueResource
+@export var dialogue_start: String = "start"
 
 func _on_settings_pressed() -> void:
 	SceneLoader.load_scene("res://scenes/Menu/SETTINGS.tscn")
@@ -29,4 +13,12 @@ func _on_house_pressed() -> void:
 	SceneLoader.load_scene("res://scenes/Locations/house.tscn")
 
 func _on_brgy_hall_pressed() -> void:
-	SceneLoader.load_scene("res://scenes/Locations/BRGY HALL.tscn")
+	print("Pressed!")
+	#
+	if not QuestManager.is_quest_completed("talk_to_tatay"):
+		var balloon = Balloon.instantiate()
+		balloon.add_to_group("dialogue_balloon")
+		get_tree().current_scene.add_child(balloon)
+		balloon.start(dialogue_resource, dialogue_start)
+	else:
+		SceneLoader.load_scene("res://scenes/Locations/BRGY HALL.tscn")

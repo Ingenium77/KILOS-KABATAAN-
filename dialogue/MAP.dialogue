@@ -1,0 +1,4 @@
+~ start
+if not QuestManager.is_quest_completed("talk_to_tatay")
+	Game Notification: Go to your house first!
+=> END
