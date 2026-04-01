@@ -21,7 +21,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_4rbpm")
 
-[node name="Credits-MainMenu" type="Button" parent="." unique_id=1197974421]
+[node name="Credits-Exit" type="Button" parent="." unique_id=1197974421]
 show_behind_parent = true
 layout_mode = 0
 offset_left = 1031.0
@@ -29,4 +29,4 @@ offset_top = 8.0
 offset_right = 1150.0
 offset_bottom = 100.0
 
-[connection signal="pressed" from="Credits-MainMenu" to="." method="_on_credits_main_menu_pressed"]
+[connection signal="pressed" from="Credits-Exit" to="." method="_on_credits_exit_pressed"]

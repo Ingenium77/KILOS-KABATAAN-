@@ -6,6 +6,7 @@ const Balloon = preload("res://dialogue/Balloon/balloon.tscn")
 @export var dialogue_resource: DialogueResource
 @export var dialogue_start: String = "start"
 
+
 @export var use_dialogue: bool = true:
 	set(v):
 		use_dialogue = v

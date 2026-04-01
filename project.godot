@@ -17,15 +17,15 @@ config/icon="res://icon.svg"
 
 [audio]
 
-buses/default_bus_layout="uid://tee686p12x1j"
+buses/default_bus_layout="uid://dsyrh84thl1bg"
 
 [autoload]
 
 DialogueManager="*uid://c3rodes2l3gxb"
 SceneLoader="*uid://c81wg5hsl8i14"
 QuestHud="*uid://db1hcoyyy26a5"
+Bgm="*uid://mid5vpeunbvv"
 QuestManager="*uid://c4h7uaa7vxpcx"
-BackgroundMusic="*uid://0p6t5yh0as66"
 
 [dialogue_manager]
 
@@ -73,7 +73,7 @@ quest_log={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogue/BRGY HALL.dialogue", "res://dialogue/FARM (CHOICE 1).dialogue", "res://dialogue/FARM (CHOICE 2).dialogue", "res://dialogue/FARM (CHOICE 3).dialogue", "res://dialogue/HOUSE.dialogue", "res://dialogue/FIXER.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogue/BRGY HALL.dialogue", "res://dialogue/FARM (CHOICE 1).dialogue", "res://dialogue/FARM (CHOICE 2).dialogue", "res://dialogue/FARM (CHOICE 3).dialogue", "res://dialogue/HOUSE.dialogue", "res://dialogue/FIXER.dialogue", "res://dialogue/MAP.dialogue")
 
 [layer_names]
 

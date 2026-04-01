@@ -1,15 +1,4 @@
 extends Control
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-
-func _on_settings_main_menu_pressed() -> void:
-	SceneLoader.load_scene("res://scenes/Menu/MAIN MENU.tscn")
+func _on_settings_exit_pressed() -> void:
+	SceneLoader.go_back()  # Returns to previous scene

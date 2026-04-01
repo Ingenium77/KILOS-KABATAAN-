@@ -9,10 +9,15 @@ var scene_path: String
 var progress: Array = []
 var use_sub_threads: bool = true
 
+var scene_history: Array = []  # Track visited scenes
+
 func _ready() -> void:
 	set_process(false)
 
-func load_scene(_scene_path: String) -> void:
+func load_scene(_scene_path: String, record_history: bool = true) -> void:
+	if record_history and get_tree().current_scene:
+		scene_history.append(get_tree().current_scene.scene_file_path)
+		
 	scene_path = _scene_path
 	
 	var new_load_screen = loading_screen.instantiate()
@@ -29,6 +34,12 @@ func start_load() -> void:
 	if state == OK:
 		set_process(true)
 
+func go_back() -> void:
+	if scene_history.is_empty():
+		push_warning("No scene history to go back to")
+		return
+	var previous_scene = scene_history.pop_back()
+	load_scene(previous_scene, false)
 
 func _process(delta: float) -> void:
 	var load_status = ResourceLoader.load_threaded_get_status(scene_path, progress)

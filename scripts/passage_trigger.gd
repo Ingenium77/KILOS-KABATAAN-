@@ -5,6 +5,7 @@ extends Area2D
 @export var require_all_quests: bool = true  # true = AND logic, false = OR logic
 @export var required_active_quests: Array[String] = []
 
+
 @export var target_scene: String = "<Location Here Replace this>"
 @export var dialogue_resource: DialogueResource
 @export var dialogue_start: String = "locked"  # Configurable start node
@@ -33,6 +34,7 @@ func _on_body_entered(body: Node2D) -> void:
 	# Show dialogue
 	if dialogue_resource:
 		show_locked_dialogue(body)
+	
 	else:
 		await get_tree().create_timer(1.0).timeout
 		release_player(body)
