@@ -1,5 +1,6 @@
 ~ start
 if QuestManager.is_quest_completed("filed_a_complaint") and QuestManager.is_quest_completed("back_to_house")
+	do QuestManager.start_quest("break_the_news_to_tatay")
 	Tatay: How did it go? What’s the news?
 	Mateo: I asked why you weren’t on the list and filed a complaint. Though, it will take time to process. Our aid might not arrive early, especially when we need it.
 	Tatay: I’m proud of you, Mateo. Doing what’s right is not always easy.
@@ -7,9 +8,12 @@ if QuestManager.is_quest_completed("filed_a_complaint") and QuestManager.is_ques
 	Tatay: Even if it doesn’t, we’ve at least tried to be fair.
 	EPISODE COMPLETE: ACHIEVED MORAL VICTORY ENDING
 	EPISODE COMPLETE: Mateo's father is proud of his son for upholding what's right despite their situation.
+	Game Notification: Congratulations for getting 1 of the 3 endings! You may now restart the game to change your path and see the other endings.
+	do QuestManager.finish_quest("break_the_news_to_tatay")
 	=> END
 	
 elif QuestManager.is_quest_completed("pay_the_fixer") and QuestManager.is_quest_completed("back_to_house")
+	do QuestManager.start_quest("break_the_news_to_tatay")
 	Tatay: Did it go well? Was my name on the list?
 	Mateo: Yes, but we had to pay someone to get your name on the list...
 	Tatay: I see, that wasn’t easy.
@@ -17,9 +21,12 @@ elif QuestManager.is_quest_completed("pay_the_fixer") and QuestManager.is_quest_
 	Tatay: True, but I hope next time we can deal with everything fairly.
 	EPISODE COMPLETE: ACHIEVED CORRUPT ENDING 
 	EPISODE COMPLETE: Mateo's father is relieved, but feels morally uneasy.
+	Game Notification: Congratulations for getting 1 of the 3 endings! You may now restart the game to change your path and see the other endings.
+	do QuestManager.finish_quest("break_the_news_to_tatay")
 	=> END
 	
 elif QuestManager.is_quest_completed("dont_pay_the_fixer") and QuestManager.is_quest_completed("back_to_house")
+	do QuestManager.start_quest("break_the_news_to_tatay")
 	Tatay: Did you check the list?
 	Mateo: Yes. You weren’t on the list, but I didn’t file a complaint.
 	Mateo: After that, a stranger told me that they could get your name on the list if I pay them. But I didn't because it's wrong.
@@ -29,6 +36,8 @@ elif QuestManager.is_quest_completed("dont_pay_the_fixer") and QuestManager.is_q
 	Tatay: We'll get through this Mateo. You and me, together.
 	EPISODE COMPLETE: ACHIEVED MORALITY, BUT AT WHAT COST? ENDING
 	EPISODE COMPLETE: Mateo's father is proud of his son for doing what's right, but also worries about the challenges they're about to face.
+	Game Notification: Congratulations for getting 1 of the 3 endings! You may now restart the game to change your path and see the other endings.
+	do QuestManager.finish_quest("break_the_news_to_tatay")
 	=> END
 
 if QuestManager.is_quest_completed("talk_to_tatay") and not QuestManager.is_quest_completed("back_to_house")

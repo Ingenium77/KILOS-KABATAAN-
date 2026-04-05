@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Quest" format=3 uid="uid://dgfkvp0x6n5nq"]
+
+[ext_resource type="Script" uid="uid://bb3m8rauu0lss" path="res://scripts/quest.gd" id="1_n2avm"]
+
+[resource]
+script = ExtResource("1_n2avm")
+id = "break_the_news_to_tatay"
+title = "Break the news to Tatay"
+description = "Tell Tatay the news."
+completion_text = "Told the news to Tatay."
+metadata/_custom_type_script = "uid://bb3m8rauu0lss"

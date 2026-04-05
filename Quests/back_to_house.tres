@@ -7,5 +7,5 @@ script = ExtResource("2_6w1dp")
 id = "back_to_house"
 title = "Back to house"
 description = "Go back to your house and talk to Tatay."
-completion_text = "badump.. doki2 lol"
+completion_text = "You've arrived at your house."
 metadata/_custom_type_script = "uid://bb3m8rauu0lss"

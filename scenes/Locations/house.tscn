@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bebvew7s54opu" path="res://scenes/Characters/player_character.tscn" id="3_2yyrm"]
 [ext_resource type="Texture2D" uid="uid://cti8paidv62h3" path="res://HEL005 ARTS & DESIGN/SETTINGS ICON.png" id="3_4c1g4"]
 [ext_resource type="PackedScene" uid="uid://bafd1icvrupct" path="res://scenes/Characters/tatay_npc.tscn" id="4_4c1g4"]
+[ext_resource type="Texture2D" uid="uid://ocjcx6tkxov4" path="res://HEL005 ARTS & DESIGN/RESTART.png" id="7_4c1g4"]
 [ext_resource type="PackedScene" uid="uid://duu3tbfqdk6u4" path="res://scenes/passage_trigger.tscn" id="8_36t42"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_epno4"]
@@ -93,7 +94,7 @@ position = Vector2(-94.25, -199)
 shape = SubResource("RectangleShape2D_2yyrm")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=168489997]
-position = Vector2(2.5, -7)
+position = Vector2(25, -6)
 shape = SubResource("RectangleShape2D_4c1g4")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1565174154]
@@ -182,4 +183,21 @@ offset_top = -327.0
 offset_right = 624.0
 offset_bottom = -269.0
 
+[node name="RestartButton" type="Button" parent="." unique_id=579306157]
+show_behind_parent = true
+top_level = true
+offset_left = -177.0
+offset_top = -67.0
+offset_right = 354.0
+offset_bottom = 42.0
+
+[node name="RestartArt" type="TextureRect" parent="RestartButton" unique_id=53916244]
+layout_mode = 0
+offset_left = -22.0
+offset_top = -87.0
+offset_right = 555.0
+offset_bottom = 213.0
+texture = ExtResource("7_4c1g4")
+
 [connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]

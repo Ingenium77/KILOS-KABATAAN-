@@ -9,5 +9,5 @@ title = "Check the list"
 description = "Inquire the staff about the list and see if Tatay's name is listed.
 
 "
-completion_text = "Go back to tatay now."
+completion_text = "Go back to your house now."
 metadata/_custom_type_script = "uid://bb3m8rauu0lss"
